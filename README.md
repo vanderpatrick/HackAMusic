@@ -1,7 +1,11 @@
 # TBA 
 ## *Subtitle to be added*
 
+<<<<<<< HEAD
 ![image info](./screenshot.png)
+=======
+Welcome IvetteMcDermott,
+>>>>>>> origin/main
 
 ## How to play
 
