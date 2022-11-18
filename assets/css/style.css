@@ -169,8 +169,6 @@ p {
     box-sizing: initial;
     cursor: pointer;
     position: relative;
-    width: var(--btn-width);
-    height: var(--btn-height);
     padding: calc(var(--standard-padding) * 2) var(--standard-padding);
     border-radius: var(--btn-border-radius);
     overflow: hidden;
@@ -178,6 +176,11 @@ p {
     color: var(--natural-gray);
     transition: var(--transition);
     box-shadow: var(--box-shadow);
+}
+
+.btn-keyboard.btn-game {
+    width: var(--btn-width);
+    height: var(--btn-height);
 }
 
 .btn-keyboard.red {
@@ -225,9 +228,12 @@ p {
     content: "";
     position: absolute;
     z-index: -1;
+    background: linear-gradient(0deg, var(--westar), var(--ash));
+}
+
+.btn-keyboard.btn-game::before {
     width:var(--btn-surface-dimensions);
     height: var(--btn-surface-dimensions);
-    background: linear-gradient(0deg, var(--westar), var(--ash));
 }
 
 /* Quarter shadow / slight smudge effect conical type of shadow*/
