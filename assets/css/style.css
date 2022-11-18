@@ -193,14 +193,15 @@ p {
 .btn-keyboard a {
     font-size: 32px;
     font-weight: 700;
-    color: var(--gallery);
+    /* color: var(--gallery); */
     text-decoration: none;
     text-transform: uppercase;
 
     /* Rainbow background colour, comment or remove it not*/
     /* background: linear-gradient(to right, #f32170, #ffeb07, #2196f3, #ff00eb);
     background-clip: text;
-    -webkit-text-fill-color: transparent; */
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 2px rgba(0, 0, 0, .5); */
 }
 
 .btn-keyboard.btn-game {
