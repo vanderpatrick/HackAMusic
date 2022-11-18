@@ -71,6 +71,12 @@ p {
     border-radius: 0 0 40px 40px;
 }
 
+.container-main-page-start {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
 .border {
     border: 1px solid var(--border-color);
 }
@@ -182,6 +188,19 @@ p {
     color: var(--natural-gray);
     transition: var(--transition);
     box-shadow: var(--box-shadow);
+}
+
+.btn-keyboard a {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--gallery);
+    text-decoration: none;
+    text-transform: uppercase;
+
+    /* Rainbow background colour, comment or remove it not*/
+    /* background: linear-gradient(to right, #f32170, #ffeb07, #2196f3, #ff00eb);
+    background-clip: text;
+    -webkit-text-fill-color: transparent; */
 }
 
 .btn-keyboard.btn-game {
