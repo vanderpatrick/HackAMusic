@@ -19,16 +19,9 @@
   <div>
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">HackAMusic</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
-          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-            </li>
+        <div class="w-75 wide-container">
+          <a class="navbar-brand" href="index.html">HackAMusic <span class="sr-only">(current)</span></a>
+          <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link" href="instructions.html">How To</a>
             </li>
@@ -39,37 +32,46 @@
           </ul>
         </div>
       </nav>
-
     </header>
   </div>
   <section class="game-zone ">
-    <div class="logo h-15 w-75 text-center mx-auto my-5 row borders">
+    <div class="logo h-15 w-75 text-center mx-auto my-5 row border">
       <div class="m-auto">
         <h2>LOGO</h2>
       </div>
     </div>
-    <div class="container-main-page h-50 w-75 text-center m-auto borders">
-      <div class="row height-div w-75 mx-auto my-3 btn-flex-display borders">
-        <div><p>LEVEL</p></div>
-        <div><p>SCORE</p></div>
+    <div class="container-main-page h-50 w-75 text-center m-auto border dark-border">
+      <div class="row height-div w-75 mx-auto my-3 btn-flex-display border">
+        <div class="level">
+          <h2>LEVEL</h2>
+          <span class="level-current"></span>
+        </div>
+        <div class="score">
+          <h2>SCORE</h2>
+          <span class="level-score"></span>
+        </div>
       </div>
-      <div class="row height-div w-75 mx-auto my-3 btn-flex-display borders">
-        <button type="button" class="btn btn-sm btn-outline-dark round">></button>
-        <div class="w-75 borders"></div>
+      <div class="row height-div w-75 mx-auto my-3 btn-flex-display border">
+        <div class="btn-play"><i class="fas fa-play"></i></div>
+        <div class="w-75 border sample-slider-container">
+          <div class="sample-slider">
+            <input type="range" value="0" class="sample-progress-bar">
+          </div>
+        </div>
       </div>
-      <div class="row height-div w-75 mx-auto my-3 btn-flex-display borders">
-        <button type="button" class="btn btn-dark ">A</button>
-        <button type="button" class="btn btn-dark ">B</button>
-        <button type="button" class="btn btn-dark ">C</button>
-        <button type="button" class="btn btn-dark ">D</button>
-        <button type="button" class="btn btn-dark ">E</button>
-        <button type="button" class="btn btn-dark ">F</button>
+      <div class="row height-div w-75 mx-auto my-3 btn-flex-display border">
+        <div class="btn-keyboard btn-game red">A</div>
+        <div class="btn-keyboard btn-game orange">B</div>
+        <div class="btn-keyboard btn-game yellow">C</div>
+        <div class="btn-keyboard btn-game green">D</div>
+        <div class="btn-keyboard btn-game blue">E</div>
+        <div class="btn-keyboard btn-game purple">F</div>
       </div>    
     </div>
   </section>
   <footer>
     <nav class="navbar navbar-light bg-light team-gh">
-      <div id="navbarText">
+      <div id="navbarText" class="w-75 wide-container">
         <ul class="navbar-nav mr-auto" id="footer-nav">
           <li class="nav-item active">
             <a class="nav-link" href="#">Ivette<span class="sr-only"></span></a>
