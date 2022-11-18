@@ -18,12 +18,47 @@
     --btn-surface-dimensions: 60px;
     --transition: box-shadow 0.02s cubic-bezier(0.79, 0.03, 0.43, 1);
     --box-shadow: inset 0px 0px 0px 0px var(--merlin), 0px 0px 0px 1.5px var(--merlin), 0px 16px 12px 0px var(--fuscous-gray);
+    --border-color: hsl(0, 0%, 93%);
+    --container-background-color: hsl(212, 15%, 22%);
+    --play-active-color: #f6c90e;
+    --play-button-shadow: 0px 0px 10px var(--play-active-color);
+    --btn-play-dimensions: 80px;
+    --btn-play-background-color: hsla(0, 0%, 0%, 0.5);
+    --fa-font-size: 32px;
+    --border-radius-circle: 50%;
 }
 
 body {
     padding: 0;
     margin: 0;
 }
+
+.container-main-page {
+    background-color: var(--container-background-color);
+    box-shadow: hsla(0, 0%, 0%, 0.19) 0px 10px 20px, hsla(0, 0%, 0%, 0.23) 0px 6px 6px;
+    /* box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px; */
+    border-radius: 10px;
+    z-index: 0;
+    position: relative;
+}
+
+.container-main-page > div.border:nth-child(1) {
+    border-radius: 40px 40px 0 0;
+}
+
+.container-main-page > div.border:nth-child(3) {
+    border-radius: 0 0 40px 40px;
+}
+
+
+.border {
+    border: 1px solid var(--border-color);
+}
+
+.dark-border {
+    border: 1px solid var(--container-background-color);
+}
+
 
 p {
     margin:0;
@@ -89,11 +124,6 @@ p {
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-}
-
-.borders {
-    border-color: black;
-    border: 2px solid;
 }
 
 /*--------footer-------*/
@@ -177,3 +207,24 @@ p {
     border-right: var(--btn-border-width) solid var(--swirl);
 }
 
+.btn-play {
+    width: var(--btn-play-dimensions);
+    height: var(--btn-play-dimensions);
+    border: 6px solid var(--border-color);
+    border-radius: var(--border-radius-circle);
+    color: var(--border-color);
+    background-color: var(--btn-play-background-color);
+    font-size: var(--fa-font-size);
+    transition: all 0.4s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-play:hover,
+.btn-play:active,
+.btn-play:focus {
+    box-shadow: var(--play-button-shadow);
+    text-shadow: var(--play-button-shadow);
+}
