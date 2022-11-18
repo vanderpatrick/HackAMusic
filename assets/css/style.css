@@ -193,7 +193,7 @@ p {
 .btn-keyboard a {
     font-size: 32px;
     font-weight: 700;
-    /* color: var(--gallery); */
+    color: var(--gallery);
     text-decoration: none;
     text-transform: uppercase;
 
