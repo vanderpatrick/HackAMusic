@@ -176,6 +176,30 @@ p {
     box-shadow: var(--box-shadow);
 }
 
+.btn-keyboard.red {
+    --box-shadow: inset 0px 0px 6px 0px red, 0px 0px 0px 1.5px red, 0px 10px 25px 0px red;
+}
+
+.btn-keyboard.orange {
+    --box-shadow: inset 0px 0px 6px 0px orange, 0px 0px 0px 1.5px orange, 0px 10px 25px 0px orange;
+}
+
+.btn-keyboard.yellow {
+    --box-shadow: inset 0px 0px 6px 0px yellow, 0px 0px 0px 1.5px yellow, 0px 10px 25px 0px yellow;
+}
+
+.btn-keyboard.green {
+    --box-shadow: inset 0px 0px 6px 0px green, 0px 0px 0px 1.5px green, 0px 10px 25px 0px green;
+}
+
+.btn-keyboard.blue {
+    --box-shadow: inset 0px 0px 6px 0px blue, 0px 0px 0px 1.5px blue, 0px 10px 25px 0px blue;
+}
+
+.btn-keyboard.purple {
+    --box-shadow: inset 0px 0px 6px 0px purple, 0px 0px 0px 1.5px purple, 0px 10px 25px 0px purple;
+}
+
 /* Shadow effect on border like pushing button */
 .btn-keyboard:active {
     --transition: box-shadow 0.2s ease-out;
