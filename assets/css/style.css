@@ -1,3 +1,30 @@
+:root {
+    --merlin: hsl(37, 6%, 25%);
+    --natural-gray: hsl(37, 8%, 55%);
+    --cararra: hsl(40, 17%, 90%);
+    --zorba: hsl(38, 9%, 56%);
+    --swirl: hsl(40, 13%, 77%);
+    --fuscous-gray: hsla(40, 6%, 30%, 0.122);
+    --westar: hsl(42, 13%, 85%);
+    --nomad: hsl(42, 12%, 67%);
+    --alto: hsl(0, 3%, 87%);
+    --ash: hsl(41, 12%, 74%);
+    --standard-padding: 15px;
+    --standard-margin: 15px;
+    --btn-border-radius: 10px;
+    --btn-width: 46px;
+    --btn-height: 21px;
+    --btn-border-width: 42px;
+    --btn-surface-dimensions: 60px;
+    --transition: box-shadow 0.02s cubic-bezier(0.79, 0.03, 0.43, 1);
+    --box-shadow: inset 0px 0px 0px 0px var(--merlin), 0px 0px 0px 1.5px var(--merlin), 0px 16px 12px 0px var(--fuscous-gray);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
 p {
     margin:0;
 }
@@ -93,3 +120,60 @@ p {
     width: 100%;
     justify-content: space-evenly;
 }
+
+
+/* Buttons */
+.btn-keyboard {
+    box-sizing: initial;
+    cursor: pointer;
+    position: relative;
+    width: var(--btn-width);
+    height: var(--btn-height);
+    padding: calc(var(--standard-padding) * 2) var(--standard-padding);
+    border-radius: var(--btn-border-radius);
+    overflow: hidden;
+    text-align: center;
+    color: var(--natural-gray);
+    transition: var(--transition);
+    box-shadow: var(--box-shadow);
+}
+
+/* Shadow effect on border like pushing button */
+.btn-keyboard:active {
+    --transition: box-shadow 0.2s ease-out;
+    --box-shadow: inset 0px 0px 6px 0px var(--merlin), 0px 0px 0px 1.5px var(--merlin), 0px 10px 12px 0px var(--fuscous-gray);
+}
+
+/* Shadow effect on surface like pushing button */
+.btn-keyboard:active::before {
+    --transition: transform 0.2s ease-out, background 0.2s ease-out;
+    background: linear-gradient(0deg, var(--westar), var(--nomad));
+}
+
+/* Surface of key */
+.btn-keyboard::before {
+    --transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
+    inset: 10px;
+    border-radius: 7px;
+    box-shadow: 0px -1px 0px 0px var(--alto), 0px 2px 0px 0px var(--zorba);
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width:var(--btn-surface-dimensions);
+    height: var(--btn-surface-dimensions);
+    background: linear-gradient(0deg, var(--westar), var(--ash));
+}
+
+/* Quarter shadow / slight smudge effect conical type of shadow*/
+.btn-keyboard::after {
+    inset: 0;
+    z-index: -2;
+    position: absolute;
+    content: "";
+    filter: blur(1px);
+    border-top: var(--btn-border-width) solid var(--cararra);
+    border-bottom: var(--btn-border-width) solid var(--zorba);
+    border-left: var(--btn-border-width) solid var(--swirl);
+    border-right: var(--btn-border-width) solid var(--swirl);
+}
+
