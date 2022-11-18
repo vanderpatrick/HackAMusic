@@ -228,3 +228,26 @@ p {
     box-shadow: var(--play-button-shadow);
     text-shadow: var(--play-button-shadow);
 }
+
+.sample-slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+}
+
+.sample-slider {
+    width: 100%;
+    position: relative;
+}
+
+.sample-progress-bar {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: var(--btn-border-radius);
+    background-color: var(--play-active-color);
+    overflow: hidden;
+    cursor: pointer;
+}
