@@ -3,6 +3,7 @@ let numBeats = 5;
 let rightAnswers = 0;
 let userInput = [];
 let randomSong = [];
+let randomSongSounds = []
 let level = 1
 const question_counter = document.querySelector(".level-current");
 const randomSongElement = document.querySelector(".random-song");
@@ -21,9 +22,9 @@ let soundArray = [sound1, sound2, sound3, sound4, sound5, sound6];
 
 function playSong() {
   var interval = 1000; // how much time should the delay between two iterations be (in milliseconds)?
-  soundArray.forEach(function (el, index) {
+  randomSongSounds.forEach(function (el, index) {
     setTimeout(function () {
-      soundArray[index].play();
+      randomSongSounds[index].play();
     }, index * interval);
   });
 }
@@ -31,8 +32,9 @@ function playSong() {
 
 // function to start a turn
 function userTurn() {
-  userInput = [];
-  rightAnswers = 0
+  userInput = [];    
+  randomSongSounds = [];
+  rightAnswers = 0;
   createSong(numBeats);
   playSong();
   playButton.setAttribute('onclick','#');
@@ -42,7 +44,10 @@ function userTurn() {
 // function to generate randomSong using 6 different sounds, length equal to the numBeats
 function createSong(numBeats) {
   randomSong = Array.from({length: numBeats}, () => Math.floor((Math.random() * 6) + 1));
-  console.log(randomSong)
+  for (i = 0; i < randomSong.length; i++) {
+    randomNum = randomSong[i]
+    randomSongSounds.push(soundArray[randomNum-1]);
+  }
 }
 function removeClass() {
   let key = document.querySelector(`div[data-key="${event.keyCode}"]`);
@@ -51,8 +56,7 @@ function removeClass() {
 function PlaySound(event) {
   let audio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
   let key = document.querySelector(`div[data-key="${event.keyCode}"]`);
-  key.classList.add("active")
-  
+  key.classList.add("active");
   audio.currentTime = 0;
   audio.play();
 }
@@ -84,7 +88,6 @@ function keyPress(key) {
         });
         location.reload();
     }
-
     playButton.setAttribute('onclick','userTurn(this)')
     
   }
