@@ -1,9 +1,14 @@
-# TBA 
-## *Subtitle to be added*
+# KeyBeats (Working title)
+## *Play your keyboard to match the beats*
 
-![image info](./screenshot.png)
+![image info](./media/images/keybeats_game.png)
 
 ## How to play
+Simple clean fun with your keyboard.
+Click play.
+Listen to the clip.
+Press the keys in sequence.
+Level up by getting all of the sequence correct.
 
 ## Setup
 
@@ -12,11 +17,10 @@
 [Click here to play!](https://www.example.com)
 
 ### How to install
-
+No installation required, just click and play :)
 
 ## Credits
 
-* [Be sure to credit any assets that are not yours](https://www.example.com)
 * [Nathalie Ivette De McDermott](https://www.linkedin.com)
 * [Massimo R](https://www.linkedin.com)
 * [Trevor Lehmann](https://www.linkedin.com)

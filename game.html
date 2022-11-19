@@ -20,10 +20,17 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@7.24.1/dist/sweetalert2.min.css" rel="stylesheet" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
+    
+
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>KeyBeats</title>
   <link rel="icon" type="image/x-icon" href="./media/images/game.ico">
     <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/testing-max-ran.js" defer></script>
   </head>
 
   <body>
@@ -53,6 +60,9 @@
           <h2>LOGO</h2>
         </div>
       </div>
+      <div class="row">
+        <p class="m-auto random-song"></p>
+      </div>
       <div
         class="container-main-page h-50 w-75 text-center m-auto border dark-border"
       >
@@ -67,7 +77,7 @@
           </div>
         </div>
         <div class="row height-div w-75 mx-auto my-3 btn-flex-display border">
-          <div class="btn-play"><i class="fas fa-play"></i></div>
+          <div class="btn-play" onclick="userTurn(this)"><i class="fas fa-play"></i></div>
           <div class="w-75 border sample-slider-container">
             <div class="sample-slider">
               <input type="range" value="0" class="sample-progress-bar" />
@@ -75,12 +85,12 @@
           </div>
         </div>
         <div class="row height-div w-75 mx-auto my-3 btn-flex-display border">
-          <div data-key="65"  class="btn-keyboard btn-game red">A</div>
-          <div data-key="83"  class="btn-keyboard btn-game orange">B</div>
-          <div data-key="68"  class="btn-keyboard btn-game yellow">C</div>
-          <div data-key="70"  class="btn-keyboard btn-game green">D</div>
-          <div data-key="71"  class="btn-keyboard btn-game blue">E</div>
-          <div data-key="72"  class="btn-keyboard btn-game purple">F</div>
+          <div onclick="keyPress(this)" data-key="65" data-sound="1" class="btn-keyboard btn-game red">A</div>
+          <div onclick="keyPress(this)" data-key="83" data-sound="2" class="btn-keyboard btn-game orange">B</div>
+          <div onclick="keyPress(this)" data-key="68" data-sound="3" class="btn-keyboard btn-game yellow">C</div>
+          <div onclick="keyPress(this)" data-key="70" data-sound="4" class="btn-keyboard btn-game green">D</div>
+          <div onclick="keyPress(this)" data-key="71" data-sound="5" class="btn-keyboard btn-game blue">E</div>
+          <div onclick="keyPress(this)" data-key="72" data-sound="6" class="btn-keyboard btn-game purple">F</div>
         </div>
       </div>
       <button onclick="next_level()" class="lv-test">level counter test</button>
