@@ -72,37 +72,39 @@ function PlaySound(event) {
 }
 // function that starts the user turn and returns results
 function keyPress(key) {
-  let keyPressed = document.querySelector(`div[data-key="${key.keyCode}"]`).getAttribute("data-sound")
-  userInput.push(keyPressed);
-  
-  if (userInput.length == randomSong.length) {
-    checkAnswer(randomSong,userInput);
+  if (keyboardActive) {
+    let keyPressed = document.querySelector(`div[data-key="${key.keyCode}"]`).getAttribute("data-sound")
+    userInput.push(keyPressed);
     
-    if (rightAnswers >= (randomSong.length-1)) {
-    
-    /*--------SweetAlert for lvl results------*/
-    Swal.fire({
-      title: rightAnswers + " out of " + numBeats,
-      background: '#111211',
-      confirmButtonColor: "#DD6B55",
-      confirmButtonText: "Level Up!",
-      });
-      level = level + 1
-      numBeats = numBeats + 1;
-      question_counter.innerHTML = level;}
-    else {
+    if (userInput.length == randomSong.length) {
+      checkAnswer(randomSong,userInput);
+      
+      if (rightAnswers >= (randomSong.length-1)) {
+      
+      /*--------SweetAlert for lvl results------*/
       Swal.fire({
         title: rightAnswers + " out of " + numBeats,
         background: '#111211',
         confirmButtonColor: "#DD6B55",
-        confirmButtonText: "Sorry, try again!",
-        }).then((result)=> {
-          if (result.isConfirmed) {
-            location.reload();
-          }
+        confirmButtonText: "Level Up!",
         });
-      playButton.setAttribute('onclick','userTurn(this)')
+        level = level + 1
+        numBeats = numBeats + 1;
+        question_counter.innerHTML = level;}
+      else {
+        Swal.fire({
+          title: rightAnswers + " out of " + numBeats,
+          background: '#111211',
+          confirmButtonColor: "#DD6B55",
+          confirmButtonText: "Sorry, try again!",
+          }).then((result)=> {
+            if (result.isConfirmed) {
+              location.reload();
+            }
+          });
+      }
     }
+    playButton.setAttribute('onclick','userTurn(this)');
   }
 }
 
