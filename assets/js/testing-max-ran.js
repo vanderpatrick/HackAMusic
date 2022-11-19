@@ -6,12 +6,14 @@ let randomSong = [];
 let level = 1
 const question_counter = document.querySelector(".level-current");
 const randomSongElement = document.querySelector(".random-song");
+const playButton = document.querySelector('.btn-play');
 
 // function to start a turn
 function userTurn() {
   userInput = [];
   rightAnswers = 0
   createSong(numBeats);
+  playButton.setAttribute('onclick','#')
   randomSongElement.innerHTML = randomSong;
 }
 
@@ -48,6 +50,8 @@ function keyPress(key) {
         });
         location.reload();
     }
+
+    playButton.setAttribute('onclick','userTurn(this)')
     
   }
 }
