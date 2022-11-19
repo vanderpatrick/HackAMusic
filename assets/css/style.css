@@ -44,6 +44,12 @@ h2 {
     text-transform: uppercase;
     color: var(--gallery);
 }
+.level-score{
+    font-size: 30px;
+}
+.level-current{
+    font-size: 30px;
+}
 
 p {
   justify-self: center;
