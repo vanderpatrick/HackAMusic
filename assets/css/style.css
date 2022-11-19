@@ -44,6 +44,12 @@ h2 {
     text-transform: uppercase;
     color: var(--gallery);
 }
+.level-score{
+    font-size: 30px;
+}
+.level-current{
+    font-size: 30px;
+}
 
 p {
   justify-self: center;
@@ -266,12 +272,14 @@ kbd {
 }
 
 /* Shadow effect on border like pushing button */
+.btn-keyboard.active,
 .btn-keyboard:active {
     --transition: box-shadow 0.2s ease-out;
     --box-shadow: inset 0px 0px 6px 0px var(--merlin), 0px 0px 0px 1.5px var(--merlin), 0px 10px 12px 0px var(--fuscous-gray);
 }
 
 /* Shadow effect on surface like pushing button */
+.btn-keyboard.active::before,
 .btn-keyboard:active::before {
     --transition: transform 0.2s ease-out, background 0.2s ease-out;
     background: linear-gradient(0deg, var(--westar), var(--nomad));
