@@ -18,16 +18,6 @@ const sound6 = new Audio('assets/sounds/sound6.wav');
 
 let soundArray = [sound1, sound2, sound3, sound4, sound5, sound6];
  
-/*
-var c = -1;
-
-function playSnd() {
-    c++;
-    if (c == sounds.length) return;
-    sounds[c].addEventListener('ended', playSnd);
-    sounds[c].play();
-}
-*/
 
 function playSong() {
   var interval = 1000; // how much time should the delay between two iterations be (in milliseconds)?
