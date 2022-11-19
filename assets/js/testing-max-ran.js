@@ -69,10 +69,10 @@ function keyPress(key) {
   
   if (userInput.length == randomSong.length) {
     checkAnswer(randomSong,userInput);
-
+    
     if (rightAnswers >= (randomSong.length-1)) {
-      
-    /*alert(rightAnswers + " out of " + numBeats);*/
+    
+    /*--------SweetAlert for lvl results------*/
     Swal.fire({
       title: rightAnswers + " out of " + numBeats,
       background: '#111211',
@@ -88,8 +88,11 @@ function keyPress(key) {
         background: '#111211',
         confirmButtonColor: "#DD6B55",
         confirmButtonText: "Sorry, try again!",
+        }).then((result)=> {
+          if (result.isConfirmed) {
+            location.reload();
+          }
         });
-        location.reload();
     }
     playButton.setAttribute('onclick','userTurn(this)')
     
