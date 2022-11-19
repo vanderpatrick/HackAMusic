@@ -3,10 +3,11 @@ let numBeats = 5;
 let rightAnswers = 0;
 let userInput = [];
 let randomSong = [];
-let randomSongSounds = []
-let level = 1
-let link = document.querySelector(".link1")
-let link1 = document.querySelector(".link2")
+let randomSongSounds = [];
+let level = 1;
+let keyboardActive = false;
+let link = document.querySelector(".link1");
+let link1 = document.querySelector(".link2");
 const question_counter = document.querySelector(".level-current");
 const randomSongElement = document.querySelector(".random-song");
 const playButton = document.querySelector('.btn-play');
@@ -24,6 +25,10 @@ let soundArray = [sound1, sound2, sound3, sound4, sound5, sound6];
 
 function playSong() {
   var interval = 1000; // how much time should the delay between two iterations be (in milliseconds)?
+  keyboardActive = false;
+  setTimeout(function () {
+    keyboardActive = true;
+  }, randomSongSounds.length * interval);
   randomSongSounds.forEach(function (el, index) {
     setTimeout(function () {
       randomSongSounds[index].play();
@@ -34,6 +39,7 @@ function playSong() {
 
 // function to start a turn
 function userTurn() {
+  keyboardActive = "active"
   userInput = [];    
   randomSongSounds = [];
   rightAnswers = 0;
@@ -56,11 +62,13 @@ function removeClass(event) {
   key.classList.remove("active")
 }
 function PlaySound(event) {
-  let audio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
-  let key = document.querySelector(`div[data-key="${event.keyCode}"]`);
-  key.classList.add("active");
-  audio.currentTime = 0;
-  audio.play();
+  if (keyboardActive) {
+    let audio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
+    let key = document.querySelector(`div[data-key="${event.keyCode}"]`);
+    key.classList.add("active");
+    audio.currentTime = 0;
+    audio.play();
+  }
 }
 // function that starts the user turn and returns results
 function keyPress(key) {
@@ -93,9 +101,8 @@ function keyPress(key) {
             location.reload();
           }
         });
+      playButton.setAttribute('onclick','userTurn(this)')
     }
-    playButton.setAttribute('onclick','userTurn(this)')
-    
   }
 }
 
