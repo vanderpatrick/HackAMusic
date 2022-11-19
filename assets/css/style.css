@@ -359,3 +359,8 @@ kbd {
     overflow: hidden; /* slim downs the toggle */
     cursor: pointer;
 }
+
+/*-------sweetalert-------
+.swal2-container {
+    color: #111211,
+};*/
