@@ -20,11 +20,23 @@ function userTurn() {
 // function to generate randomSong using 6 different sounds, length equal to the numBeats
 function createSong(numBeats) {
   randomSong = Array.from({length: numBeats}, () => Math.floor((Math.random() * 6) + 1));
+  console.log(randomSong)
 }
-
+function removeClass() {
+  let key = document.querySelector(`div[data-key="${event.keyCode}"]`);
+  key.classList.remove("active")
+}
+function PlaySound(event) {
+  let audio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
+  let key = document.querySelector(`div[data-key="${event.keyCode}"]`);
+  key.classList.add("active")
+  
+  audio.currentTime = 0;
+  audio.play();
+}
 // function that starts the user turn and returns results
 function keyPress(key) {
-  var keyPressed = key.getAttribute("data-sound");
+  let keyPressed = document.querySelector(`div[data-key="${key.keyCode}"]`).getAttribute("data-sound")
   userInput.push(keyPressed);
   if (userInput.length == randomSong.length) {
     checkAnswer(randomSong,userInput);
@@ -65,3 +77,6 @@ function checkAnswer(randomSong, userInput) {
     }
 }
 
+document.addEventListener('keydown', keyPress)
+document.addEventListener('keydown', PlaySound)
+document.addEventListener('keyup', removeClass)
