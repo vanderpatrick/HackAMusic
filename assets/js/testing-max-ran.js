@@ -4,6 +4,8 @@ let rightAnswers = 0;
 let userInput = [];
 let randomSong = [];
 let level = 1
+let link = document.querySelector(".link1")
+let link1 = document.querySelector(".link2")
 const question_counter = document.querySelector(".level-current");
 const randomSongElement = document.querySelector(".random-song");
 const playButton = document.querySelector('.btn-play');
@@ -44,7 +46,7 @@ function createSong(numBeats) {
   randomSong = Array.from({length: numBeats}, () => Math.floor((Math.random() * 6) + 1));
   console.log(randomSong)
 }
-function removeClass() {
+function removeClass(event) {
   let key = document.querySelector(`div[data-key="${event.keyCode}"]`);
   key.classList.remove("active")
 }
@@ -60,6 +62,7 @@ function PlaySound(event) {
 function keyPress(key) {
   let keyPressed = document.querySelector(`div[data-key="${key.keyCode}"]`).getAttribute("data-sound")
   userInput.push(keyPressed);
+  
   if (userInput.length == randomSong.length) {
     checkAnswer(randomSong,userInput);
 
@@ -99,6 +102,20 @@ function checkAnswer(randomSong, userInput) {
     }
 }
 
+function redirect(){
+  link.onclick = () => {
+    window.location.href = "game.html"
+  }
+}
+function redirect1(){
+  link1.onclick = () => {
+    window.location.href = "instructions.html"
+  }
+}
+
 document.addEventListener('keydown', keyPress)
 document.addEventListener('keydown', PlaySound)
 document.addEventListener('keyup', removeClass)
+
+redirect()
+redirect1()
