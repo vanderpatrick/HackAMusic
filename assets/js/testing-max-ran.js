@@ -26,10 +26,29 @@ function keyPress(key) {
   userInput.push(keyPressed);
   if (userInput.length == randomSong.length) {
     checkAnswer(randomSong,userInput);
-    alert(rightAnswers + " out of " + numBeats);
-    level = level + 1
-    numBeats = numBeats + 1;
-    question_counter.innerHTML = level;
+
+    if (rightAnswers >= (randomSong.length-1)) {
+      
+    /*alert(rightAnswers + " out of " + numBeats);*/
+    Swal.fire({
+      title: rightAnswers + " out of " + numBeats,
+      background: '#111211',
+      confirmButtonColor: "#DD6B55",
+      confirmButtonText: "Level Up!",
+      });
+      level = level + 1
+      numBeats = numBeats + 1;
+      question_counter.innerHTML = level;}
+    else {
+      Swal.fire({
+        title: rightAnswers + " out of " + numBeats,
+        background: '#111211',
+        confirmButtonColor: "#DD6B55",
+        confirmButtonText: "Sorry, try again!",
+        });
+        location.reload();
+    }
+    
   }
 }
 
