@@ -3,11 +3,16 @@ let numBeats = 5;
 let rightAnswers = 0;
 let userInput = [];
 let randomSong = [];
+let level = 1
+const question_counter = document.querySelector(".level-current");
+const randomSongElement = document.querySelector(".random-song");
 
 // function to start a turn
 function userTurn() {
+  userInput = [];
+  rightAnswers = 0
   createSong(numBeats);
-  alert(randomSong);
+  randomSongElement.innerHTML = randomSong;
 }
 
 // function to generate randomSong using 6 different sounds, length equal to the numBeats
@@ -22,6 +27,9 @@ function keyPress(key) {
   if (userInput.length == randomSong.length) {
     checkAnswer(randomSong,userInput);
     alert(rightAnswers + " out of " + numBeats);
+    level = level + 1
+    numBeats = numBeats + 1;
+    question_counter.innerHTML = level;
   }
 }
 
