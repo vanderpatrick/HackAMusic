@@ -72,34 +72,35 @@ function PlaySound(event) {
 }
 // function that starts the user turn and returns results
 function keyPress(key) {
-  if (keyboardActive) {
-    let keyPressed = document.querySelector(`div[data-key="${key.keyCode}"]`).getAttribute("data-sound")
-    userInput.push(keyPressed);
+  let keyPressed = document.querySelector(`div[data-key="${key.keyCode}"]`).getAttribute("data-sound")
+  userInput.push(keyPressed);
+  
+  if (userInput.length == randomSong.length) {
+    checkAnswer(randomSong,userInput);
     
-    if (userInput.length == randomSong.length) {
-      checkAnswer(randomSong,userInput);
-
-      if (rightAnswers >= (randomSong.length-1)) {
-        
-      /*alert(rightAnswers + " out of " + numBeats);*/
+    if (rightAnswers >= (randomSong.length-1)) {
+    
+    /*--------SweetAlert for lvl results------*/
+    Swal.fire({
+      title: rightAnswers + " out of " + numBeats,
+      background: '#111211',
+      confirmButtonColor: "#DD6B55",
+      confirmButtonText: "Level Up!",
+      });
+      level = level + 1
+      numBeats = numBeats + 1;
+      question_counter.innerHTML = level;}
+    else {
       Swal.fire({
         title: rightAnswers + " out of " + numBeats,
         background: '#111211',
         confirmButtonColor: "#DD6B55",
-        confirmButtonText: "Level Up!",
+        confirmButtonText: "Sorry, try again!",
+        }).then((result)=> {
+          if (result.isConfirmed) {
+            location.reload();
+          }
         });
-        level = level + 1
-        numBeats = numBeats + 1;
-        question_counter.innerHTML = level;}
-      else {
-        Swal.fire({
-          title: rightAnswers + " out of " + numBeats,
-          background: '#111211',
-          confirmButtonColor: "#DD6B55",
-          confirmButtonText: "Sorry, try again!",
-          });
-          location.reload();
-      }
       playButton.setAttribute('onclick','userTurn(this)')
     }
   }
