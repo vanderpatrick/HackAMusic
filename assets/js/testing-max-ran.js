@@ -8,12 +8,34 @@ const question_counter = document.querySelector(".level-current");
 const randomSongElement = document.querySelector(".random-song");
 const playButton = document.querySelector('.btn-play');
 
+// Assigning audio file to variables
+const sound1 = new Audio('assets/sounds/sound1.wav');
+const sound2 = new Audio('assets/sounds/sound2.wav');
+const sound3 = new Audio('assets/sounds/sound3.wav');
+const sound4 = new Audio('assets/sounds/sound4.wav');
+const sound5 = new Audio('assets/sounds/sound5.wav');
+const sound6 = new Audio('assets/sounds/sound6.wav');
+
+let soundArray = [sound1, sound2, sound3, sound4, sound5, sound6];
+ 
+
+function playSong() {
+  var interval = 1000; // how much time should the delay between two iterations be (in milliseconds)?
+  soundArray.forEach(function (el, index) {
+    setTimeout(function () {
+      soundArray[index].play();
+    }, index * interval);
+  });
+}
+
+
 // function to start a turn
 function userTurn() {
   userInput = [];
   rightAnswers = 0
   createSong(numBeats);
-  playButton.setAttribute('onclick','#')
+  playSong();
+  playButton.setAttribute('onclick','#');
   randomSongElement.innerHTML = randomSong;
 }
 
