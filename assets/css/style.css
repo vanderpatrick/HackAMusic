@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Yesteryear&display=swap');
 
 :root {
     --merlin: hsl(37, 6%, 25%);
@@ -29,14 +29,45 @@
     --btn-play-dimensions: 80px;
     --fa-font-size: 32px;
     --border-radius-circle: 50%;
+    --shadow: hsla(0, 0%, 0%, 0.19) 0px 10px 20px, hsla(0, 0%, 0%, 0.23) 0px 6px 6px;
 }
 
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Special Elite', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--container-background-color);
 }
 
+.button-container {
+    height: 25%;
+    margin-top: var(--standard-margin);
+    margin-bottom: var(--standard-margin);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.buttons {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin: calc(var(--standard-margin) * 3) calc(var(--standard-margin) * 2);
+}
+
+.button-sizing {
+    height: 84%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 15px 60px;
+    border: 1px solid white;
+    border-radius: 40px;
+}
 
 /* Typography */
 h2 {
@@ -62,7 +93,7 @@ p {
 
 .container-main-page {
     background-color: var(--container-background-color);
-    box-shadow: hsla(0, 0%, 0%, 0.19) 0px 10px 20px, hsla(0, 0%, 0%, 0.23) 0px 6px 6px;
+    box-shadow: var(--shadow);
     border-radius: 10px;
     z-index: 0;
     position: relative;
@@ -89,40 +120,6 @@ p {
 
 .dark-border {
     border: 1px solid var(--container-background-color);
-}
-
-.logo {
-    width: 94%;
-    height: 6em;
-    justify-content: center;
-}
-
-.navbar-display {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.navbar-nav {
-    margin-left: auto;
-    width: 15%;
-    justify-content: space-between;
-}
-
-.nav-item a {
-    text-transform: uppercase;
-    font-size: 18px;
-}
-
-.logo-star-btns {
-    width: 100%;
-    display: inline-flex;
-    justify-content: space-evenly;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    align-items: center;
-    align-content: center;
 }
 
 /*-------game-zone-------*/
@@ -189,18 +186,99 @@ kbd {
     border: 2px solid;
 }
 
-/*--------footer-------*/
-.team-gh {
-  margin-left: 0;
-  margin-left: auto;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 3em;
+/* Carousel */
+.carousel .carousel-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+.carousel .carousel-control-prev,
+.carousel .carousel-control-next {
+    background-color: transparent;
+    border: none;
+}
+
+/* Header */
+.navbar {
+    box-shadow: var(--shadow);
+    background-color: #3a4750;
+}
+
+.navbar-display {
   display: flex;
-  align-content: center;
-  align-items: center;
   justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar-nav {
+    margin-left: auto;
+    width: 15%;
+    justify-content: space-between;
+}
+
+.nav-item a.nav-link {
+    color: var(--gallery);
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.header-image {
+    background-image: url('../../media/images/elijah-ekdahl-8XxF2kYHIgo-unsplash.jpg');
+}
+
+.logo-star-btns {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
+
+.logo-container {
+    display: flex;
+}
+
+.logo-container img {
+    height: 450px;
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+    margin: 0 auto;
+}
+
+/*--------footer-------*/
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: var(--shadow);
+}
+
+footer .navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: var(--shadow);
+}
+
+footer h3 {
+    font-family: 'Yesteryear', cursive;
+    color: var(--gallery);
+    display: inline-block;
+    transform: rotate(-18deg);
+    position: absolute;
+    left: 7%;
+    bottom: 85%;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+    letter-spacing: 1px;
+    z-index: 1;
 }
 
 #navbarText {
@@ -228,7 +306,7 @@ kbd {
     box-shadow: var(--box-shadow);
 }
 
-.btn-keyboard a {
+.btn-keyboard span {
     font-size: 32px;
     font-weight: 700;
     color: var(--gallery);
@@ -273,6 +351,8 @@ kbd {
 
 /* Shadow effect on border like pushing button */
 .btn-keyboard.active,
+.btn-keyboard:hover,
+.btn-keyboard:focus,
 .btn-keyboard:active {
     --transition: box-shadow 0.2s ease-out;
     --box-shadow: inset 0px 0px 6px 0px var(--merlin), 0px 0px 0px 1.5px var(--merlin), 0px 10px 12px 0px var(--fuscous-gray);
@@ -280,6 +360,8 @@ kbd {
 
 /* Shadow effect on surface like pushing button */
 .btn-keyboard.active::before,
+.btn-keyboard:hover::before,
+.btn-keyboard:focus::before,
 .btn-keyboard:active::before {
     --transition: transform 0.2s ease-out, background 0.2s ease-out;
     background: linear-gradient(0deg, var(--westar), var(--nomad));
@@ -364,3 +446,4 @@ kbd {
 .swal2-container {
     color: #111211,
 };*/
+
