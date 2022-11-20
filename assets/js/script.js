@@ -1,3 +1,5 @@
+// jshint esversion: 6
+
 // the numBeats variable will be function of the game level
 let numBeats = 1;
 let rightAnswers = 0;
@@ -5,9 +7,12 @@ let userInput = [];
 let randomSong = [];
 let randomSongSequence = [];
 let randomSongSounds = [];
-let userScore = 0
-let score = document.querySelector('.level-score')
+let userScore = 0;
+let score = document.querySelector('.level-score');
 let level = 1;
+let seconds = 0;
+let randomNum = 0;
+let secondsTxt = "";
 let keyboardActive = false;
 let songPlayed = false;
 let link = document.querySelector(".link1");
@@ -32,7 +37,7 @@ let soundArray = [sound1, sound2, sound3, sound4, sound5, sound6];
 function userTurn() {
   if (level > 1) {
     deleteProgressbar();
-  };
+  }
   userInput = [];
   randomSongSounds = [];
   rightAnswers = 0;
@@ -45,10 +50,10 @@ function playSong() {
   var interval = 1000; // how much time should the delay between two iterations be (in milliseconds)?
   keyboardActive = false;
   songPlayed = true;
-  playButton.classList.add('btn-play-on-air')
+  playButton.classList.add('btn-play-on-air');
   setTimeout(function () {
     keyboardActive = true;
-    playButton.classList.remove('btn-play-on-air')
+    playButton.classList.remove('btn-play-on-air');
   }, randomSongSounds.length * interval);
 
 
@@ -66,7 +71,7 @@ function playSong() {
 
 
   seconds = interval / 1000 * (level);
-  secondsTxt = seconds + "s"
+  secondsTxt = seconds + "s";
   createProgressbar('progressbar1', secondsTxt);
 }
 
@@ -77,16 +82,17 @@ function createSong(numBeats) {
   } else {
     randomSong.push(Math.floor((Math.random() * 6) + 1));
   }
-  // to convert randomSong numerical array to randomSongSounds sound (.wav) array 
+  // to convert randomSong numerical array to randomSongSounds sound (.wav) array
+  let i = 0;
   for (i = 0; i < randomSong.length; i++) {
-    randomNum = randomSong[i]
+    randomNum = randomSong[i];
     randomSongSounds.push(soundArray[randomNum-1]);
   }
   console.log(randomSongSequence);
 }
 function removeClass(event) {
   let key = document.querySelector(`div[data-key="${event.keyCode}"]`);
-  key.classList.remove("active")
+  key.classList.remove("active");
 }
 function PlaySound(event) {
   if (keyboardActive) {
@@ -110,13 +116,13 @@ function PlaySound(event) {
 function keyPress(key) {
   if (keyboardActive) {
     // get the data-sound number related to button pressed and append in the userInput array
-    let keyPressed = document.querySelector(`div[data-key="${key.keyCode}"]`).getAttribute("data-sound")
+    let keyPressed = document.querySelector(`div[data-key="${key.keyCode}"]`).getAttribute("data-sound");
     userInput.push(keyPressed);
 
     if (userInput.length == randomSong.length) {
       setTimeout(function () {
         checkAnswer(randomSong,userInput);
-        userScore = userScore + rightAnswers * 10
+        userScore = userScore + rightAnswers * 10;
         score.innerHTML = userScore;
         songPlayed = false;
         if (rightAnswers == randomSong.length) {  
@@ -136,7 +142,7 @@ function keyPress(key) {
               userInput = [];
             }
           });
-          level = level + 1
+          level = level + 1;
           numBeats = numBeats + 1;
           question_counter.innerHTML = level;
           deleteProgressbar();
@@ -159,8 +165,8 @@ function keyPress(key) {
                 location.reload();
               }
             });
-            userScore = 0
-            score.innerHTML = userScore
+            userScore = 0;
+            score.innerHTML = userScore;
         }
       }, 500);
     }
@@ -215,18 +221,18 @@ function deleteProgressbar() {
 
 function redirect(){
   link.onclick = () => {
-    window.location.href = "game.html"
-  }
+    window.location.href = "game.html";
+  };
 }
 function redirect1(){
   link1.onclick = () => {
-    window.location.href = "instructions.html"
-  }
+    window.location.href = "instructions.html";
+  };
 }
 
-document.addEventListener('keydown', keyPress)
-document.addEventListener('keydown', PlaySound)
-document.addEventListener('keyup', removeClass)
+document.addEventListener('keydown', keyPress);
+document.addEventListener('keydown', PlaySound);
+document.addEventListener('keyup', removeClass);
 document.addEventListener('keypress', function(event) {
   if (event.key === "Enter" && userInput.length == 0 && songPlayed == false) {
     event.preventDefault();
@@ -234,6 +240,6 @@ document.addEventListener('keypress', function(event) {
   }
 });
 
-redirect()
-redirect1()
+redirect();
+redirect1();
 
