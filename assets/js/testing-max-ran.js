@@ -23,7 +23,6 @@ const sound7 = new Audio('assets/sounds/sound7.wav');
 
 let soundArray = [sound1, sound2, sound3, sound4, sound5, sound6];
  
-
 function playSong() {
   var interval = 1000; // how much time should the delay between two iterations be (in milliseconds)?
   keyboardActive = false;
@@ -35,11 +34,18 @@ function playSong() {
       randomSongSounds[index].play();
     }, index * interval);
   });
+  seconds = interval / 1000 * (level + 4);
+  secondsTxt = seconds + "s"
+  console.log(secondsTxt)
+  createProgressbar('progressbar1', secondsTxt);
 }
-
 
 // function to start a turn
 function userTurn() {
+  console.log(level);
+  if (level > 1) {
+    deleteProgressbar();
+  };
   keyboardActive = "active"
   userInput = [];    
   randomSongSounds = [];
@@ -128,6 +134,43 @@ function checkAnswer(randomSong, userInput) {
         }
     }
 }
+
+/*
+ *  Creates a progressbar.
+ *  @param id the id of the div we want to transform in a progressbar
+ *  @param duration the duration of the timer example: '10s'
+ *  @param callback, optional function which is called when the progressbar reaches 0.
+ */
+function createProgressbar(id, duration, callback) {
+  // We select the div that we want to turn into a progressbar
+  var progressbar = document.getElementById(id);
+  progressbar.className = 'progressbar';
+
+  // We create the div that changes width to show progress
+  var progressbarinner = document.createElement('div');
+  progressbarinner.className = 'inner';
+
+  // Now we set the animation parameters
+  progressbarinner.style.animationDuration = duration;
+
+  // Eventually couple a callback
+  if (typeof(callback) === 'function') {
+    progressbarinner.addEventListener('animationend', callback);
+  }
+
+  // Append the progressbar to the main progressbardiv
+  progressbar.appendChild(progressbarinner);
+
+  // When everything is set up we start the animation
+  progressbarinner.style.animationPlayState = 'running';
+}
+
+function deleteProgressbar() {
+  var progressbar = document.getElementById('progressbar1');
+  progressbar.classList.remove('progressbar');
+  progressbar.innerHTML = "";
+}
+
 
 function redirect(){
   link.onclick = () => {
