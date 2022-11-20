@@ -29,7 +29,6 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>KeyBeats</title>
   <link rel="icon" type="image/x-icon" href="./media/images/game.ico">
-    <script src="assets/js/script.js" defer></script>
     <script src="assets/js/testing-max-ran.js" defer></script>
   </head>
 
@@ -70,18 +69,16 @@
         <div class="row height-div w-75 mx-auto my-3 btn-flex-display border">
           <div class="btn-play" onclick="userTurn(this)"><i class="fas fa-play"></i></div>
           <div class="w-75 border sample-slider-container">
-            <div class="sample-slider">
-              <input type="range" value="0" class="sample-progress-bar" />
-            </div>
+            <div id='progressbar1'></div>
           </div>
         </div>
         <div class="row height-div w-75 mx-auto my-3 btn-flex-display border">
           <div onclick="keyPress(this)" data-key="65" data-sound="1" class="btn-keyboard btn-game red"><h2 class="dark">A</h2></div>
-          <div onclick="keyPress(this)" data-key="83" data-sound="2" class="btn-keyboard btn-game orange"><h2 class="dark">B</h2></div>
-          <div onclick="keyPress(this)" data-key="68" data-sound="3" class="btn-keyboard btn-game yellow"><h2 class="dark">C</h2></div>
-          <div onclick="keyPress(this)" data-key="70" data-sound="4" class="btn-keyboard btn-game green"><h2 class="dark">D</h2></div>
-          <div onclick="keyPress(this)" data-key="71" data-sound="5" class="btn-keyboard btn-game blue"><h2 class="dark">E</h2></div>
-          <div onclick="keyPress(this)" data-key="72" data-sound="6" class="btn-keyboard btn-game purple"><h2 class="dark">F</h2></div>
+          <div onclick="keyPress(this)" data-key="83" data-sound="2" class="btn-keyboard btn-game orange"><h2 class="dark">S</h2></div>
+          <div onclick="keyPress(this)" data-key="68" data-sound="3" class="btn-keyboard btn-game yellow"><h2 class="dark">D</h2></div>
+          <div onclick="keyPress(this)" data-key="70" data-sound="4" class="btn-keyboard btn-game green"><h2 class="dark">F</h2></div>
+          <div onclick="keyPress(this)" data-key="71" data-sound="5" class="btn-keyboard btn-game blue"><h2 class="dark">G</h2></div>
+          <div onclick="keyPress(this)" data-key="72" data-sound="6" class="btn-keyboard btn-game purple"><h2 class="dark">H</h2></div>
         </div>
       </div>
       <button onclick="next_level()" class="lv-test">level counter test</button>
@@ -117,7 +114,7 @@
     <audio data-key="68" src="./assets/sounds/sound3.wav"></audio>
     <audio data-key="70" src="./assets/sounds/sound4.wav"></audio>
     <audio data-key="71" src="./assets/sounds/sound5.wav"></audio>
-    <audio data-key="72" src="./assets/sounds/sound5.wav"></audio>
+    <audio data-key="72" src="./assets/sounds/sound6.wav"></audio>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>

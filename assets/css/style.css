@@ -104,7 +104,6 @@ p {
     display: flex;
     margin: 0 auto;
 }
-
 .container-main-page {
     background-color: var(--container-background-color);
     box-shadow: var(--shadow);
@@ -459,6 +458,42 @@ footer h3 {
     overflow: hidden; /* slim downs the toggle */
     cursor: pointer;
 }
+
+
+.progressbar {
+    width: 80%;
+    margin: 25px auto;
+    border: solid 1px #000;
+  }
+  .progressbar .inner {
+    height: 15px;
+    animation: progressbar-countdown;
+    /* Placeholder, this will be updated using javascript */
+    animation-duration: 40s;
+    /* We stop in the end */
+    animation-iteration-count: 1;
+    /* Stay on pause when the animation is finished finished */
+    animation-fill-mode: forwards;
+    /* We start paused, we start the animation using javascript */
+    animation-play-state: paused;
+    /* We want a linear animation, ease-out is standard */
+    animation-timing-function: linear;
+  }
+  @keyframes progressbar-countdown {
+    0% {
+      width: 0%;
+      background: #0F0;
+    }
+    50% {
+      width: 50%;
+      background: rgb(6, 6, 223);
+    }
+    100% {
+        width: 100%;
+        background: rgb(223, 6, 6);
+      }
+  }
+
 
 /*-------sweetalert-------
 .swal2-container {
