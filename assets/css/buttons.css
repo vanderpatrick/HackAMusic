@@ -134,6 +134,11 @@
     text-shadow: var(--play-button-shadow);
 }
 
+.btn-play-on-air {
+    box-shadow: var(--play-button-shadow);
+    text-shadow: var(--play-button-shadow);
+}
+
 .button-container {
     height: 25%;
     margin-top: var(--standard-margin);

@@ -37,15 +37,16 @@ function userTurn() {
   rightAnswers = 0;
   createSong(numBeats);
   playSong();
-  playButton.setAttribute('onclick','#');
   randomSongElement.innerHTML = randomSong;
 }
 
 function playSong() {
   var interval = 1000; // how much time should the delay between two iterations be (in milliseconds)?
   keyboardActive = false;
+  playButton.classList.add('btn-play-on-air')
   setTimeout(function () {
     keyboardActive = true;
+    playButton.classList.remove('btn-play-on-air')
   }, randomSongSounds.length * interval);
   randomSongSounds.forEach(function (el, index) {
     setTimeout(function () {
@@ -60,7 +61,6 @@ function playSong() {
   });
   seconds = interval / 1000 * (level + 4);
   secondsTxt = seconds + "s"
-  console.log(secondsTxt)
   createProgressbar('progressbar1', secondsTxt);
 }
 
