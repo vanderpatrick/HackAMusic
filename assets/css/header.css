@@ -29,7 +29,7 @@
 }
 
 .logo-container img {
-    height: 450px;
+    width: 350px;
     filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
     margin: 0 auto;
 }

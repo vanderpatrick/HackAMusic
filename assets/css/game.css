@@ -20,7 +20,7 @@
 
 .main-page,
 .game-zone {
-    height: 90%;
+    height: 100vh;
 }
 
 kbd {
