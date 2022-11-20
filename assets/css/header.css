@@ -1,7 +1,7 @@
 /* Header */
 .navbar {
-    box-shadow: var(--shadow);
-    background-color: var(--limed-spruce);
+    background-color: hsl(0, 2%, 9%);
+    box-shadow: hsla(0, 0%, 44%, 0.55) 0px 0px 98px, hsla(0, 0%, 76%, 0.35) 0px 0px 96px;
 }
 
 .navbar-display {
@@ -15,6 +15,10 @@
     margin-left: auto;
     width: 20%;
     justify-content: space-between;
+}
+
+.navbar-brand h1 {
+    margin:auto;
 }
 
 .nav-item a.nav-link {

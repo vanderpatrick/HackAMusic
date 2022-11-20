@@ -15,7 +15,7 @@
     --alto: hsl(0, 3%, 87%);
     --ash: hsl(41, 12%, 74%);
     --border-color: hsl(0, 0%, 93%);
-    --container-background-color: hsl(212, 15%, 22%);
+    --container-background-color: hsl(0, 2%, 9%);
     --btn-play-background-color: hsla(0, 0%, 0%, 0.5);
     --standard-padding: 15px;
     --standard-margin: 15px;
@@ -30,8 +30,8 @@
     --btn-play-dimensions: 80px;
     --fa-font-size: 32px;
     --border-radius-circle: 50%;
-    --shadow: hsla(0, 0%, 0%, 0.19) 0px 10px 20px, hsla(0, 0%, 0%, 0.23) 0px 6px 6px;
-    --footer-height: 42px;
+    --shadow: hsla(0, 0%, 44%, 0.55) 0px 0px 98px, hsla(0, 0%, 76%, 0.35) 0px 0px 96px;
+    --footer-height: 2.5rem;
 }
 
 * {
@@ -42,8 +42,10 @@
 
 body {
     font-family: 'Special Elite', sans-serif;
-    color: var(--outer-space);;
-    background-color: var(--container-background-color);
+    color: var(--outer-space);
+    background-color: black;
+    background-image: url('/media/images/stage3.jpg');
+    background-size: cover;
 }
 
 .main {
