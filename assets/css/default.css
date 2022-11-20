@@ -45,7 +45,7 @@ body {
     color: var(--outer-space);
     background-color: black;
     background-image: url('/media/images/stage3.jpg');
-    background-size: cover;
+    background-size: cover; 
 }
 
 .main {
@@ -60,6 +60,7 @@ body {
     z-index: 0;
     position: relative;
     padding: calc(var(--standard-padding) * 2) calc(var(--standard-padding) * 3);
+    min-height: 700px;
 }
 
 .container-main-page > div.border:nth-child(1) {

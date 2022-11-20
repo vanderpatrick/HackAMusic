@@ -6,6 +6,10 @@ h1, h2 {
     color: var(--gallery);
 }
 
+h4 {
+    color: var(--gallery);
+}
+
 h1:hover, .navbar .nav-item a.nav-link:hover, .nav-item a.nav-link:hover {
     color: var(--ripe-lemon);
 }
