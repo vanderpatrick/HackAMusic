@@ -16,11 +16,12 @@
     flex-direction: column;
     justify-content: center;
     padding-bottom: var(--footer-height);
+    height: 100%;
 }
 
 .main-page,
 .game-zone {
-    height: 90%;
+    height: 100vh;
 }
 
 kbd {
@@ -68,4 +69,8 @@ kbd {
 .visual {
     border-color: black;
     border: 2px solid;
+}
+
+.circle-button[onclick] {
+  cursor: pointer;
 }
