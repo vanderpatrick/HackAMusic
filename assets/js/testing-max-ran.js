@@ -150,7 +150,6 @@ function keyPress(key) {
           score.innerHTML = userScore
       }
     }
-    playButton.setAttribute('onclick','userTurn(this)');
   }
 }
 
@@ -217,7 +216,7 @@ document.addEventListener('keyup', removeClass)
 document.addEventListener('keypress', function(event) {
   if (event.key === "Enter" && userInput.length == 0) {
     event.preventDefault();
-    playButton.click();
+    userTurn();
   }
 });
 
