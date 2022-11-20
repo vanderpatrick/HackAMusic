@@ -49,7 +49,7 @@ function userTurn() {
     deleteProgressbar();
   };
   keyboardActive = "active"
-  userInput = [];    
+  userInput = [];
   randomSongSounds = [];
   rightAnswers = 0;
   createSong(numBeats);
@@ -111,12 +111,17 @@ function keyPress(key) {
         },
         confirmButtonColor: "#A5DD86",
         confirmButtonText: "Level Up!",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            userInput = [];
+          }
         });
         level = level + 1
         numBeats = numBeats + 1;
         question_counter.innerHTML = level;
         deleteProgressbar();
       }
+
       else {
         Swal.fire({
           title: rightAnswers + " out of " + numBeats,
@@ -201,6 +206,12 @@ function redirect1(){
 document.addEventListener('keydown', keyPress)
 document.addEventListener('keydown', PlaySound)
 document.addEventListener('keyup', removeClass)
+document.addEventListener('keypress', function(event) {
+  if (event.key === "Enter" && userInput.length == 0) {
+    event.preventDefault();
+    playButton.click();
+  }
+});
 
 redirect()
 redirect1()
