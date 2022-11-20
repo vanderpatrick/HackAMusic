@@ -1,40 +1,78 @@
-# KeyBeats (Working title)
-## *Play your keyboard to match the beats*
+# KeyPlayers presents:
+<br>
 
-![image info](./media/images/keybeats_game.png)
+
+![](media/images/screenshot-2.png)
+
+<br>
+
+## *Play your keyboard to match the beats!*
+<br>
+
+Musical memory game to play with keyboard. Easy to navigate and intuitive play. The user is given a musical sequence which they have to recreate with pressing the keys in their keyboard. Each key will reproduce a different instrument sound. It has visuals effects for better user experience.
+Success in reproducing the sequence will bring the game to the next level. Each level will increment the sequence with one sound to the previous one.
+
+<br>
 
 ## How to play
-* ### Simple clean fun with your keyboard.
-* Click play.
+<br>
+
+![](media/images/screenshot-3.png)
+
+<br>
+
+* Simple clean fun with your keyboard.
+* Press enter for get the sequence to play.
 * Listen to the musical sequence.
-* Use the keyboard keys and press the keys in musical sequence.
+* Press the keys in your keyboard to match the musical sequence.
 * Level up by getting all of the musical sequence correct.
 
-### Deployed link
+<br>
 
-[Click here to play!](https://www.example.com)
+## Deployed link
+
+<br>
+
+[KeyBeats - Click here to play!](url:https://vanderpatrick.github.io/HackAMusic/index.html)
 
 ### How to install
 No installation required, just click and play :)
 
-## Setup
+<br>
 
-### Description of the design (Screenshots, wireframe)
+## Wireframes
+
+<br>
+
+### The home page
+
+<br>
+
 ![landing page](./docs/images/landing-page-wireframe.png)
-*The landing page*
+<br>
 
+### The how to play page
+
+<br>
 
 ![how to page](./docs/images/how-to-page-wireframe.png)
-*The how to play page*
+<br>
 
+### The game page
+
+<br>
 
 ![game page](./docs/images/game-page-wireframe.png)
-*The game page*
 
+<br>
 
-### Color Palette
-[Sourced from She Codes](https://palettes.shecodes.io/palettes/1100#palette)
+## Design
 
+<br>
+
+### Colour Palette
+
+<br>
 A simple colour palette to reflect the them of a retro keyboard game, inspired by the [Launchpad X](https://novationmusic.com/en/launch/launchpad-x). Keeping to metallic colours that allow the keyboard to pop. 
 
 ![color palette](./media/images/color-palette.png)
@@ -45,29 +83,84 @@ A simple colour palette to reflect the them of a retro keyboard game, inspired b
 --ripe-lemon: hsl(48, 93%, 51%);
 --gallery: hsl(0, 0%, 93%);
 ```
+<br>
 
-### Fonts 
-[Sourced from Google Fonts](https://fonts.google.com/)
+### Fonts
+
+<br>
+Fonts to go accorder with the theme of the game.
 
 Main font: 'Special Elite' - for the body and headings.
 Paired with: 'Yesteryear' - chosen to add a small style change for the footer.
 
-### Logical flow
-![Flow diagram]()
 
-### Future development
-* Add a leaderboard 
-    * Save score and present in table
-* Play with 3 lives 
-    * Three chances to get the sequence correct, otherwise lose lives
-* Define accurate point system
-    * Length of keypress to determine whether user sticking to the tempo and rhythm
+## Features
+
+<br>
+The site consists of three pages, which objective is to present a game to the user. Home page that present to the user two buttons, "How To" that directs to the instructions, and "Play" that directs to the game page.
+
+Game to be play with the keyboard keys, but has a visual effect keys and progress bar, also a score count for better experience and engage of the user. 
+
+<br>
+
+![Game](media/images/screenshot-1.png)
+
+<br>
+
+### Posible features to implement in future
+
+<br>
+
+* Add a leaderboard: 
+    - Save score and present in table
+* Play with 3 lives: 
+    - Three chances to get the sequence correct, otherwise lose lives
+* Define accurate point system:
+    - Length of keypress to determine whether user sticking to the tempo and rhythm
+
+## Bugs
+
+<br>
+At the moment no bug had been notice.
+
+<br>
+
+## Technologies used
+
+<br>
+
+* [HTML](https://en.wikipedia.org/wiki/HTML5)
+* [CSS](https://en.wikipedia.org/wiki/CSS)
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+
+* [GitHub](https://github.com/)
+* [GitPod](https://www.gitpod.io/)
+
+* [BootStrap](https://getbootstrap.com/)
+* [SweetAlert2](https://sweetalert2.github.io/)
+* [Google Fonts](https://fonts.google.com/)
+<br>
+
+## Validation
+
+<br>
+All the code had been test in validators sites as follows:
+
+* HTML and CSS in [w3c](https://validator.w3.org/) report had return with no error, but a warning that have not being able to sort.
+* JavaScript in [JsHint](https://jshint.com/) report had return with no error, but many warnings referent to the version ES6 that have not being able to sort.
+
+Manual test had been run and at the moment the game is running as expected.
+
+<br>
 
 ## Credits
 
-* [Nathalie Ivette De McDermott](https://www.linkedin.com/in/ivette-mc-dermott-8b2045242/)
-* [Massimo Ranali](https://www.linkedin.com/in/massimo-ranalli-11253315b/)
-* [Trevor Lehmann](https://www.linkedin.com)
-* [Patrick Alexander Lucas Van Der Flier](https://www.linkedin.com)
-* [Sirinya Richardson](https://www.linkedin.com/in/sirinya-richardson/)
+* Palette [She Codes](https://palettes.shecodes.io/palettes/1100#palette)
+* Media audios [Freesound](https://freesound.org/)
+* Research
+    [Stack Overflow](https://stackoverflow.com/)
+    [GeeksforGeeks](https://www.geeksforgeeks.org/)
+
+
+
 
