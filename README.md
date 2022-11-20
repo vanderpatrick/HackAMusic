@@ -21,8 +21,16 @@ No installation required, just click and play :)
 
 ### Description of the design (Screenshots, wireframe)
 ![landing page](./docs/images/landing-page-wireframe.png)
+*The landing page*
+
+
 ![how to page](./docs/images/how-to-page-wireframe.png)
+*The how to play page*
+
+
 ![game page](./docs/images/game-page-wireframe.png)
+*The game page*
+
 
 ### Color Palette
 [Sourced from She Codes](https://palettes.shecodes.io/palettes/1100#palette)
