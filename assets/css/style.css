@@ -73,6 +73,13 @@ body {
     border-radius: 40px;
 }
 
+.title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
 /* Typography */
 h2 {
     font-weight: 700;
@@ -86,7 +93,9 @@ h1 {
 }
 
 p {
+    margin-bottom: 0;
   justify-self: center;
+  color: var(--gallery);
 }
 
 .level-score{
@@ -116,7 +125,7 @@ p {
     border-radius: 40px 40px 0 0;
 }
 
-.container-main-page > div.border:nth-child(3) {
+.container-main-page > div.border:last-child {
     border-radius: 0 0 40px 40px;
 }
 
@@ -304,6 +313,29 @@ footer h3 {
   justify-content: space-between;
 }
 
+.instructions {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.instuction-segment {
+    width: 75%;
+    margin: 0 auto;
+    padding-top: var(--standard-padding);
+    padding-bottom: var(--standard-padding);
+}
+
+.instruction-keyboard {
+    flex-direction: column;
+    width: 100%;
+}
+
+.instruction-keyboard p {
+    margin-top: 1.5rem;
+}
+
 
 /* Buttons */
 .btn-keyboard {
@@ -415,6 +447,7 @@ footer h3 {
     border-right: var(--btn-border-width) solid var(--swirl);
 }
 
+.circle-button,
 .btn-play {
     width: var(--btn-play-dimensions);
     height: var(--btn-play-dimensions);
@@ -423,11 +456,14 @@ footer h3 {
     color: var(--border-color);
     background-color: var(--btn-play-background-color);
     font-size: var(--fa-font-size);
-    transition: all 0.4s ease;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.btn-play {
+    transition: all 0.4s ease;
+    cursor: pointer;
 }
 
 .btn-play:hover,
