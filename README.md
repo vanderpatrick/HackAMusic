@@ -10,6 +10,17 @@
 * Use the keyboard keys and press the keys in musical sequence.
 * Level up by getting all of the musical sequence correct.
 
+## Color Palette
+
+![color palette](./media/images/color-palette.png)
+
+```
+--outer-space: hsl(212, 15%, 22%);
+--limed-spruce: hsl(205, 16%, 27%);
+--ripe-lemon: hsl(48, 93%, 51%);
+--gallery: hsl(0, 0%, 93%);
+```
+
 ## Setup
 
 ### Deployed link
