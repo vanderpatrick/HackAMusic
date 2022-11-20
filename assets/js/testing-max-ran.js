@@ -99,8 +99,7 @@ function keyPress(key) {
       checkAnswer(randomSong,userInput);
       userScore = userScore + rightAnswers * 10
       score.innerHTML = userScore
-      if (rightAnswers >= (randomSong.length-1)) {
-      
+      if (rightAnswers == randomSong.length) {  
       /*--------SweetAlert for lvl results------*/
       Swal.fire({
         title: rightAnswers + " out of " + numBeats,
@@ -115,7 +114,9 @@ function keyPress(key) {
         });
         level = level + 1
         numBeats = numBeats + 1;
-        question_counter.innerHTML = level;}
+        question_counter.innerHTML = level;
+        deleteProgressbar();
+      }
       else {
         Swal.fire({
           title: rightAnswers + " out of " + numBeats,
