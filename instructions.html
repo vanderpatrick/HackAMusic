@@ -13,20 +13,20 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/testing-max-ran.js" defer></script>
-  <title>Title</title>
+  <title>KeyBeats</title>
+  <link rel="icon" type="image/x-icon" href="./media/images/game.ico">
 </head>
 
 <body>
-  <div>
+  <section>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="w-75 wide-container">
-          <a class="navbar-brand" href="index.html">HackAMusic <span class="sr-only">(current)</span></a>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"><h1>KeyBeats</h1><span class="sr-only">(current)</span></a>
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link" href="instructions.html">How To</a>
             </li>
-            <!-- to remove -->
             <li class="nav-item">
               <a class="nav-link" href="game.html">Game</a>
             </li>
@@ -34,23 +34,63 @@
         </div>
       </nav>
     </header>
-  </div>
-  <section class="game-zone ">
-    <div class="logo h-15 w-75 text-center mx-auto my-5 row border">
-      <div class="m-auto">
-        <h2>LOGO</h2>
-      </div>
+  </section>
+  <section class="instruction-page container">
+    <div class="logo-container">
+      <img src="./media/images/game.png" alt="KeyBeats Logo">
     </div>
-    <div class="container-main-page h-50 w-75 text-center m-auto border">
-      <h2>How to</h2>
+    <div class="container-main-page text-center">
+      <div class="title instuction-segment border">
+          <h2>How to</h2>
+          <p>play the game</p>
+      </div>
+      <div class="row height-div w-75 mx-auto my-3 btn-flex-display border">
+        <div class="instructions instuction-segment">
+          <div class="circle-button">
+            <i class="fas fa-play"></i>
+          </div>
+          <p>Press play</p>
+        </div>
+      </div>
+      <div class="row height-div w-75 mx-auto my-3 btn-flex-display border">
+        <div class="instructions instuction-segment">
+          <p>Listen to the sequence</p>
+          <div class="circle-button">
+            <i class="fas fa-headphones"></i>
+          </div>
+        </div>
+      </div>
+      <div class="row height-div w-75 mx-auto my-3 btn-flex-display border">
+        <div class="instructions instuction-segment instruction-keyboard">
+          <div class="row w-75 mx-auto my-3 btn-flex-display">
+            <div onclick="keyPress(this)" data-key="65" data-sound="1" class="btn-keyboard btn-game red"><h2 class="dark">A</h2></div>
+            <div onclick="keyPress(this)" data-key="83" data-sound="2" class="btn-keyboard btn-game orange"><h2 class="dark">S</h2></div>
+            <div onclick="keyPress(this)" data-key="68" data-sound="3" class="btn-keyboard btn-game yellow"><h2 class="dark">D</h2></div>
+            <div onclick="keyPress(this)" data-key="70" data-sound="4" class="btn-keyboard btn-game green"><h2 class="dark">F</h2></div>
+            <div onclick="keyPress(this)" data-key="71" data-sound="5" class="btn-keyboard btn-game blue"><h2 class="dark">G</h2></div>
+            <div onclick="keyPress(this)" data-key="72" data-sound="6" class="btn-keyboard btn-game purple"><h2 class="dark">H</h2></div>
+          </div>
+          <p>Press the keys to match the sequence</p>
+        </div>
+      </div>
+      <div class="row height-div w-75 mx-auto my-3 btn-flex-display border">
+        <div class="instructions instuction-segment">
+          <div class="circle-button">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <p>Level up by getting the order of <br/>the musical sequence correct</p>
+        </div>
+      </div>
     </div>
   </section>
   <footer>
-    <nav class="navbar navbar-light bg-light team-gh">
-      <div id="navbarText" class="w-75 wide-container">
+    <nav>
+      <div id="navbarText" class="container">
+        <h3>Design and crafted by</h3>
         <ul class="navbar-nav mr-auto" id="footer-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Ivette<span class="sr-only"></span></a>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Ivette<span class="sr-only"></span
+            ></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Massimo</a>

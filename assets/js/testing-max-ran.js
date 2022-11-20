@@ -104,8 +104,13 @@ function keyPress(key) {
       /*--------SweetAlert for lvl results------*/
       Swal.fire({
         title: rightAnswers + " out of " + numBeats,
-        background: '#111211',
-        confirmButtonColor: "#DD6B55",
+        background: '#303841',
+        padding: '1rem 0 3rem 0',
+        icon: 'success',
+        customClass: {
+          popup: 'game-result-popup',
+        },
+        confirmButtonColor: "#A5DD86",
         confirmButtonText: "Level Up!",
         });
         level = level + 1
@@ -114,7 +119,12 @@ function keyPress(key) {
       else {
         Swal.fire({
           title: rightAnswers + " out of " + numBeats,
-          background: '#111211',
+          background: '#303841',
+          padding: '1rem 0 3rem 0',
+          icon: 'error',
+          customClass: {
+            popup: 'game-result-popup',
+          },
           confirmButtonColor: "#DD6B55",
           confirmButtonText: "Sorry, try again!",
           }).then((result)=> {

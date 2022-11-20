@@ -1,0 +1,29 @@
+.instructions {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.instuction-segment {
+    width: 75%;
+    margin: 0 auto;
+    padding-top: var(--standard-padding);
+    padding-bottom: var(--standard-padding);
+}
+
+.instruction-keyboard {
+    flex-direction: column;
+    width: 100%;
+}
+
+.instruction-keyboard p {
+    margin-top: 1.5rem;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}

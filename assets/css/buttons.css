@@ -1,0 +1,162 @@
+/* Buttons */
+.btn-keyboard {
+    box-sizing: initial;
+    cursor: pointer;
+    position: relative;
+    padding: calc(var(--standard-padding) * 2) var(--standard-padding);
+    border-radius: var(--btn-border-radius);
+    overflow: hidden;
+    text-align: center;
+    color: var(--natural-gray);
+    transition: var(--transition);
+    box-shadow: var(--box-shadow);
+}
+
+.btn-keyboard span {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--gallery);
+    text-decoration: none;
+    text-transform: uppercase;
+
+    /* Rainbow background colour, comment or remove it not*/
+    /* background: linear-gradient(to right, #f32170, #ffeb07, #2196f3, #ff00eb);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 2px rgba(0, 0, 0, .5); */
+}
+
+.btn-keyboard span,
+.btn-keyboard h2.dark {
+    color: var(--outer-space);
+}
+
+.btn-keyboard.btn-game {
+    width: var(--btn-width);
+    height: var(--btn-height);
+}
+
+.btn-keyboard.red {
+    --box-shadow: inset 0px 0px 6px 0px red, 0px 0px 0px 1.5px red, 0px 10px 25px 0px red;
+}
+
+.btn-keyboard.orange {
+    --box-shadow: inset 0px 0px 6px 0px orange, 0px 0px 0px 1.5px orange, 0px 10px 25px 0px orange;
+}
+
+.btn-keyboard.yellow {
+    --box-shadow: inset 0px 0px 6px 0px yellow, 0px 0px 0px 1.5px yellow, 0px 10px 25px 0px yellow;
+}
+
+.btn-keyboard.green {
+    --box-shadow: inset 0px 0px 6px 0px green, 0px 0px 0px 1.5px green, 0px 10px 25px 0px green;
+}
+
+.btn-keyboard.blue {
+    --box-shadow: inset 0px 0px 6px 0px blue, 0px 0px 0px 1.5px blue, 0px 10px 25px 0px blue;
+}
+
+.btn-keyboard.purple {
+    --box-shadow: inset 0px 0px 6px 0px purple, 0px 0px 0px 1.5px purple, 0px 10px 25px 0px purple;
+}
+
+/* Shadow effect on border like pushing button */
+.btn-keyboard.active,
+.btn-keyboard:hover,
+.btn-keyboard:focus,
+.btn-keyboard:active {
+    --transition: box-shadow 0.2s ease-out;
+    --box-shadow: inset 0px 0px 6px 0px var(--merlin), 0px 0px 0px 1.5px var(--merlin), 0px 10px 12px 0px var(--fuscous-gray);
+}
+
+/* Shadow effect on surface like pushing button */
+.btn-keyboard.active::before,
+.btn-keyboard:hover::before,
+.btn-keyboard:focus::before,
+.btn-keyboard:active::before {
+    --transition: transform 0.2s ease-out, background 0.2s ease-out;
+    background: linear-gradient(0deg, var(--westar), var(--nomad));
+}
+
+/* Surface of key */
+.btn-keyboard::before {
+    --transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
+    inset: 10px;
+    border-radius: 7px;
+    box-shadow: 0px -1px 0px 0px var(--alto), 0px 2px 0px 0px var(--zorba);
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: linear-gradient(0deg, var(--westar), var(--ash));
+}
+
+.btn-keyboard.btn-game::before {
+    width:var(--btn-surface-dimensions);
+    height: var(--btn-surface-dimensions);
+}
+
+/* Quarter shadow / slight smudge effect conical type of shadow*/
+.btn-keyboard::after {
+    inset: 0;
+    z-index: -2;
+    position: absolute;
+    content: "";
+    filter: blur(1px);
+    border-top: var(--btn-border-width) solid var(--cararra);
+    border-bottom: var(--btn-border-width) solid var(--zorba);
+    border-left: var(--btn-border-width) solid var(--swirl);
+    border-right: var(--btn-border-width) solid var(--swirl);
+}
+
+.circle-button,
+.btn-play {
+    width: var(--btn-play-dimensions);
+    height: var(--btn-play-dimensions);
+    border: 6px solid var(--border-color);
+    border-radius: var(--border-radius-circle);
+    color: var(--border-color);
+    background-color: var(--btn-play-background-color);
+    font-size: var(--fa-font-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-play {
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.btn-play:hover,
+.btn-play:active,
+.btn-play:focus {
+    box-shadow: var(--play-button-shadow);
+    text-shadow: var(--play-button-shadow);
+}
+
+.button-container {
+    height: 25%;
+    margin-top: var(--standard-margin);
+    margin-bottom: var(--standard-margin);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.buttons {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-sizing {
+    height: 84%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 15px 60px;
+    border: 1px solid white;
+    border-radius: 40px;
+}

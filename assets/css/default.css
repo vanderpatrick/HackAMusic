@@ -1,0 +1,76 @@
+:root {
+    /* color palette */
+    --outer-space: hsl(212, 15%, 22%);
+    --limed-spruce: hsl(205, 16%, 27%);
+    --ripe-lemon: hsl(48, 93%, 51%);
+    --gallery: hsl(0, 0%, 93%);
+    --merlin: hsl(37, 6%, 25%);
+    --natural-gray: hsl(37, 8%, 55%);
+    --cararra: hsl(40, 17%, 90%);
+    --zorba: hsl(38, 9%, 56%);
+    --swirl: hsl(40, 13%, 77%);
+    --fuscous-gray: hsla(40, 6%, 30%, 0.122);
+    --westar: hsl(42, 13%, 85%);
+    --nomad: hsl(42, 12%, 67%);
+    --alto: hsl(0, 3%, 87%);
+    --ash: hsl(41, 12%, 74%);
+    --border-color: hsl(0, 0%, 93%);
+    --container-background-color: hsl(212, 15%, 22%);
+    --btn-play-background-color: hsla(0, 0%, 0%, 0.5);
+    --standard-padding: 15px;
+    --standard-margin: 15px;
+    --btn-border-radius: 10px;
+    --btn-width: 46px;
+    --btn-height: 21px;
+    --btn-border-width: 42px;
+    --btn-surface-dimensions: 60px;
+    --transition: box-shadow 0.2s ease;
+    --box-shadow: inset 0px 0px 0px 0px var(--merlin), 0px 0px 0px 1.5px var(--merlin), 0px 16px 12px 0px var(--fuscous-gray);
+    --play-button-shadow: 0px 0px 10px var(--ripe-lemon);
+    --btn-play-dimensions: 80px;
+    --fa-font-size: 32px;
+    --border-radius-circle: 50%;
+    --shadow: hsla(0, 0%, 0%, 0.19) 0px 10px 20px, hsla(0, 0%, 0%, 0.23) 0px 6px 6px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Special Elite', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    color: var(--outer-space);;
+    background-color: var(--container-background-color);
+}
+
+.container-main-page {
+    background-color: var(--container-background-color);
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+    z-index: 0;
+    position: relative;
+    padding: calc(var(--standard-padding) * 2) calc(var(--standard-padding) * 3);
+}
+
+.container-main-page > div.border:nth-child(1) {
+    border-radius: 40px 40px 0 0;
+}
+
+.container-main-page > div.border:last-child {
+    border-radius: 0 0 40px 40px;
+}
+
+.container-main-page-start {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.border {
+    border: 1px solid var(--border-color);
+}
+
+.dark-border {
+    border: 1px solid var(--container-background-color);
+}
+

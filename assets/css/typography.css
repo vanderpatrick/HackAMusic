@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Yesteryear&display=swap');
+
+h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--gallery);
+}
+
+p {
+    margin-bottom: 0;
+  justify-self: center;
+  color: var(--gallery);
+}
+
+.level-score { 
+    font-size: 30px;
+}
+
+.level-current {
+    font-size: 30px;
+}
