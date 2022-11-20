@@ -24,31 +24,14 @@ const sound6 = new Audio('assets/sounds/sound6.wav');
 const sound7 = new Audio('assets/sounds/sound7.wav');
 
 let soundArray = [sound1, sound2, sound3, sound4, sound5, sound6];
- 
-function playSong() {
-  var interval = 1000; // how much time should the delay between two iterations be (in milliseconds)?
-  keyboardActive = false;
-  setTimeout(function () {
-    keyboardActive = true;
-  }, randomSongSounds.length * interval);
-  randomSongSounds.forEach(function (el, index) {
-    setTimeout(function () {
-      randomSongSounds[index].play();
-    }, index * interval);
-  });
-  seconds = interval / 1000 * (level + 4);
-  secondsTxt = seconds + "s"
-  console.log(secondsTxt)
-  createProgressbar('progressbar1', secondsTxt);
-}
+
 
 // function to start a turn
 function userTurn() {
-  console.log(level);
+  // TO REMOVE CLICKABILITY OF PLAY BUTTON
   if (level > 1) {
     deleteProgressbar();
   };
-  keyboardActive = "active"
   userInput = [];
   randomSongSounds = [];
   rightAnswers = 0;
@@ -58,9 +41,33 @@ function userTurn() {
   randomSongElement.innerHTML = randomSong;
 }
 
+function playSong() {
+  var interval = 1000; // how much time should the delay between two iterations be (in milliseconds)?
+  keyboardActive = false;
+  setTimeout(function () {
+    keyboardActive = true;
+  }, randomSongSounds.length * interval);
+  randomSongSounds.forEach(function (el, index) {
+    setTimeout(function () {
+      randomSongSounds[index].play();
+      let key = document.querySelector(`[data-sound="${randomSong[index]}"]`);
+      let previousKey = document.querySelector(`[data-sound="${randomSong[index-1]}"]`);
+      key.classList.add("shakey");
+      previousKey.classList.remove("shakey");
+      let nextKey = document.querySelector(`[data-sound="${randomSong[index+1]}"]`);
+      
+    }, index * interval);
+  });
+  seconds = interval / 1000 * (level + 4);
+  secondsTxt = seconds + "s"
+  console.log(secondsTxt)
+  createProgressbar('progressbar1', secondsTxt);
+}
+
 // function to generate randomSong using 6 different sounds, length equal to the numBeats
 function createSong(numBeats) {
   randomSong = Array.from({length: numBeats}, () => Math.floor((Math.random() * 6) + 1));
+  // to convert randomSong numerical array to randomSongSounds sound (.wav) array 
   for (i = 0; i < randomSong.length; i++) {
     randomNum = randomSong[i]
     randomSongSounds.push(soundArray[randomNum-1]);
@@ -120,6 +127,7 @@ function keyPress(key) {
         numBeats = numBeats + 1;
         question_counter.innerHTML = level;
         deleteProgressbar();
+        keyboardActive = false;
       }
 
       else {
