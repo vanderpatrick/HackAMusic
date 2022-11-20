@@ -4,6 +4,8 @@ let rightAnswers = 0;
 let userInput = [];
 let randomSong = [];
 let randomSongSounds = [];
+let userScore = 0
+let score = document.querySelector('.level-score')
 let level = 1;
 let keyboardActive = false;
 let link = document.querySelector(".link1");
@@ -76,9 +78,8 @@ function PlaySound(event) {
     } else {
       sound7.play();
     }
-    
-    console.log(key.getAttribute("data-sound"));
-    console.log(randomSong[userInput.length - 1]);
+    // console.log(key.getAttribute("data-sound"));
+    // console.log(randomSong[userInput.length - 1]);
   }
 }
 // function that starts the user turn and returns results
@@ -90,7 +91,8 @@ function keyPress(key) {
 
     if (userInput.length == randomSong.length) {
       checkAnswer(randomSong,userInput);
-      
+      userScore = userScore + rightAnswers * 10
+      score.innerHTML = userScore
       if (rightAnswers >= (randomSong.length-1)) {
       
       /*--------SweetAlert for lvl results------*/
@@ -114,6 +116,8 @@ function keyPress(key) {
               location.reload();
             }
           });
+          userScore = 0
+          score.innerHTML = userScore
       }
     }
     playButton.setAttribute('onclick','userTurn(this)');
