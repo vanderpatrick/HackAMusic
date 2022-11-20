@@ -62,7 +62,6 @@
 
 /* Shadow effect on border like pushing button */
 .btn-keyboard.active,
-.btn-keyboard:hover,
 .btn-keyboard:focus,
 .btn-keyboard:active {
     --transition: box-shadow 0.2s ease-out;
@@ -71,7 +70,6 @@
 
 /* Shadow effect on surface like pushing button */
 .btn-keyboard.active::before,
-.btn-keyboard:hover::before,
 .btn-keyboard:focus::before,
 .btn-keyboard:active::before {
     --transition: transform 0.2s ease-out, background 0.2s ease-out;
@@ -125,13 +123,6 @@
 .btn-play {
     transition: all 0.4s ease;
     cursor: pointer;
-}
-
-.btn-play:hover,
-.btn-play:active,
-.btn-play:focus {
-    box-shadow: var(--play-button-shadow);
-    text-shadow: var(--play-button-shadow);
 }
 
 .btn-play-on-air {
