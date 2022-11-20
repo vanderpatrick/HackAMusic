@@ -36,7 +36,7 @@ No installation required, just click and play :)
 * [Massimo Ranali](https://www.linkedin.com/in/massimo-ranalli-11253315b/)
 * [Trevor Lehmann](https://www.linkedin.com)
 * [Patrick Alexander Lucas Van Der Flier](https://www.linkedin.com)
-* [Sirinya Richardson](https://www.linkedin.com)
+* [Sirinya Richardson](https://www.linkedin.com/in/sirinya-richardson/)
 
 
 ### TODO
