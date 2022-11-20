@@ -61,7 +61,6 @@ body {
     align-content: center;
     align-items: center;
     justify-content: center;
-    margin: calc(var(--standard-margin) * 3) calc(var(--standard-margin) * 2);
 }
 
 .button-sizing {
@@ -146,6 +145,7 @@ p {
     align-content: center;
 }
 
+.main-page,
 .game-zone {
     display: flex;
     flex-direction: column;
@@ -256,7 +256,7 @@ kbd {
 }
 
 .logo-container {
-    display: flex;
+    margin: 0 auto 30px auto;
 }
 
 .logo-container img {
@@ -272,6 +272,7 @@ footer {
     left: 0;
     right: 0;
     box-shadow: var(--shadow);
+    background-color: var(--limed-spruce);
 }
 
 footer .navbar {
