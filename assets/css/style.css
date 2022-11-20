@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Yesteryear&display=swap');
 
 :root {
+    /* color palette */
+    --outer-space: #303841;
+    --limed-spruce: hsl(205, 16%, 27%);
+    --ripe-lemon: hsl(48, 93%, 51%);
+    --gallery: hsl(0, 0%, 93%);
+
     --merlin: hsl(37, 6%, 25%);
     --natural-gray: hsl(37, 8%, 55%);
     --cararra: hsl(40, 17%, 90%);
@@ -11,9 +17,7 @@
     --nomad: hsl(42, 12%, 67%);
     --alto: hsl(0, 3%, 87%);
     --ash: hsl(41, 12%, 74%);
-    --gallery: hsl(0, 0%, 93%);
     --border-color: hsl(0, 0%, 93%);
-    --ripe-lemon: hsl(48, 93%, 51%);
     --container-background-color: hsl(212, 15%, 22%);
     --btn-play-background-color: hsla(0, 0%, 0%, 0.5);
     --standard-padding: 15px;
@@ -38,6 +42,7 @@ body {
     font-family: 'Special Elite', sans-serif;
     height: 100vh;
     width: 100vw;
+    color: var(--outer-space);;
     background-color: var(--container-background-color);
 }
 
@@ -204,7 +209,7 @@ kbd {
 /* Header */
 .navbar {
     box-shadow: var(--shadow);
-    background-color: #3a4750;
+    background-color: var(--limed-spruce);
 }
 
 .navbar-display {
@@ -318,6 +323,11 @@ footer h3 {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 2px rgba(0, 0, 0, .5); */
+}
+
+.btn-keyboard span,
+.btn-keyboard h2.dark {
+    color: var(--outer-space);
 }
 
 .btn-keyboard.btn-game {
