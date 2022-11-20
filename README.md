@@ -33,7 +33,7 @@ No installation required, just click and play :)
 ## Credits
 
 * [Nathalie Ivette De McDermott](https://www.linkedin.com)
-* [Massimo R](https://www.linkedin.com)
+* [Massimo Ranali](https://www.linkedin.com/in/massimo-ranalli-11253315b/)
 * [Trevor Lehmann](https://www.linkedin.com)
 * [Patrick Alexander Lucas Van Der Flier](https://www.linkedin.com)
 * [Sirinya Richardson](https://www.linkedin.com)
