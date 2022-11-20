@@ -3,11 +3,13 @@ let numBeats = 5;
 let rightAnswers = 0;
 let userInput = [];
 let randomSong = [];
+let randomSongSequence = [];
 let randomSongSounds = [];
 let userScore = 0
 let score = document.querySelector('.level-score')
 let level = 1;
 let keyboardActive = false;
+let songPlayed = false;
 let link = document.querySelector(".link1");
 let link1 = document.querySelector(".link2");
 const question_counter = document.querySelector(".level-current");
@@ -28,7 +30,6 @@ let soundArray = [sound1, sound2, sound3, sound4, sound5, sound6];
 
 // function to start a turn
 function userTurn() {
-  // TO REMOVE CLICKABILITY OF PLAY BUTTON
   if (level > 1) {
     deleteProgressbar();
   };
@@ -43,22 +44,27 @@ function userTurn() {
 function playSong() {
   var interval = 1000; // how much time should the delay between two iterations be (in milliseconds)?
   keyboardActive = false;
+  songPlayed = true;
   playButton.classList.add('btn-play-on-air')
   setTimeout(function () {
     keyboardActive = true;
     playButton.classList.remove('btn-play-on-air')
   }, randomSongSounds.length * interval);
+
+
+  // function to play the array of sounds 
   randomSongSounds.forEach(function (el, index) {
     setTimeout(function () {
       randomSongSounds[index].play();
       let key = document.querySelector(`[data-sound="${randomSong[index]}"]`);
-      let previousKey = document.querySelector(`[data-sound="${randomSong[index-1]}"]`);
       key.classList.add("shakey");
-      previousKey.classList.remove("shakey");
-      let nextKey = document.querySelector(`[data-sound="${randomSong[index+1]}"]`);
-      
+      setTimeout(function () {
+        key.classList.remove("shakey");
+      }, 900);
     }, index * interval);
   });
+
+
   seconds = interval / 1000 * (level + 4);
   secondsTxt = seconds + "s"
   createProgressbar('progressbar1', secondsTxt);
@@ -72,6 +78,7 @@ function createSong(numBeats) {
     randomNum = randomSong[i]
     randomSongSounds.push(soundArray[randomNum-1]);
   }
+  console.log(randomSongSequence);
 }
 function removeClass(event) {
   let key = document.querySelector(`div[data-key="${event.keyCode}"]`);
@@ -103,52 +110,55 @@ function keyPress(key) {
     userInput.push(keyPressed);
 
     if (userInput.length == randomSong.length) {
-      checkAnswer(randomSong,userInput);
-      userScore = userScore + rightAnswers * 10
-      score.innerHTML = userScore
-      if (rightAnswers == randomSong.length) {  
-      /*--------SweetAlert for lvl results------*/
-      Swal.fire({
-        title: rightAnswers + " out of " + numBeats,
-        background: '#303841',
-        padding: '1rem 0 3rem 0',
-        icon: 'success',
-        customClass: {
-          popup: 'game-result-popup',
-        },
-        confirmButtonColor: "#A5DD86",
-        confirmButtonText: "Level Up!",
-        }).then((result) => {
-          if (result.isConfirmed) {
-            userInput = [];
-          }
-        });
-        level = level + 1
-        numBeats = numBeats + 1;
-        question_counter.innerHTML = level;
-        deleteProgressbar();
-        keyboardActive = false;
-      }
-
-      else {
+      setTimeout(function () {
+        checkAnswer(randomSong,userInput);
+        userScore = userScore + rightAnswers * 10
+        score.innerHTML = userScore;
+        songPlayed = false;
+        if (rightAnswers == randomSong.length) {  
+        /*--------SweetAlert for lvl results------*/
         Swal.fire({
           title: rightAnswers + " out of " + numBeats,
           background: '#303841',
           padding: '1rem 0 3rem 0',
-          icon: 'error',
+          icon: 'success',
           customClass: {
             popup: 'game-result-popup',
           },
-          confirmButtonColor: "#DD6B55",
-          confirmButtonText: "Sorry, try again!",
-          }).then((result)=> {
+          confirmButtonColor: "#A5DD86",
+          confirmButtonText: "Level Up!",
+          }).then((result) => {
             if (result.isConfirmed) {
-              location.reload();
+              userInput = [];
             }
           });
-          userScore = 0
-          score.innerHTML = userScore
-      }
+          level = level + 1
+          numBeats = numBeats + 1;
+          question_counter.innerHTML = level;
+          deleteProgressbar();
+          keyboardActive = false;
+        }
+
+        else {
+          Swal.fire({
+            title: rightAnswers + " out of " + numBeats,
+            background: '#303841',
+            padding: '1rem 0 3rem 0',
+            icon: 'error',
+            customClass: {
+              popup: 'game-result-popup',
+            },
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Sorry, try again!",
+            }).then((result)=> {
+              if (result.isConfirmed) {
+                location.reload();
+              }
+            });
+            userScore = 0
+            score.innerHTML = userScore
+        }
+      }, 500);
     }
   }
 }
@@ -214,7 +224,7 @@ document.addEventListener('keydown', keyPress)
 document.addEventListener('keydown', PlaySound)
 document.addEventListener('keyup', removeClass)
 document.addEventListener('keypress', function(event) {
-  if (event.key === "Enter" && userInput.length == 0) {
+  if (event.key === "Enter" && userInput.length == 0 && songPlayed == false) {
     event.preventDefault();
     userTurn();
   }
@@ -222,3 +232,4 @@ document.addEventListener('keypress', function(event) {
 
 redirect()
 redirect1()
+
