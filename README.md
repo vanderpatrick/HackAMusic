@@ -10,7 +10,24 @@
 * Use the keyboard keys and press the keys in musical sequence.
 * Level up by getting all of the musical sequence correct.
 
-## Color Palette
+### Deployed link
+
+[Click here to play!](https://www.example.com)
+
+### How to install
+No installation required, just click and play :)
+
+## Setup
+
+### Description of the design (Screenshots, wireframe)
+![landing page](./docs/images/landing-page-wireframe.png)
+![how to page](./docs/images/how-to-page-wireframe.png)
+![game page](./docs/images/game-page-wireframe.png)
+
+### Color Palette
+[Sourced from She Codes](https://palettes.shecodes.io/palettes/1100#palette)
+
+A simple colour palette to reflect the them of a retro keyboard game, inspired by the [Launchpad X](https://novationmusic.com/en/launch/launchpad-x). Keeping to metallic colours that allow the keyboard to pop. 
 
 ![color palette](./media/images/color-palette.png)
 
@@ -21,14 +38,22 @@
 --gallery: hsl(0, 0%, 93%);
 ```
 
-## Setup
+### Fonts 
+[Sourced from Google Fonts](https://fonts.google.com/)
 
-### Deployed link
+Main font: 'Special Elite' - for the body and headings.
+Paired with: 'Yesteryear' - chosen to add a small style change for the footer.
 
-[Click here to play!](https://www.example.com)
+### Logical flow
+![Flow diagram]()
 
-### How to install
-No installation required, just click and play :)
+### Future development
+* Add a leaderboard 
+    * Save score and present in table
+* Play with 3 lives 
+    * Three chances to get the sequence correct, otherwise lose lives
+* Define accurate point system
+    * Length of keypress to determine whether user sticking to the tempo and rhythm
 
 ## Credits
 
@@ -38,12 +63,3 @@ No installation required, just click and play :)
 * [Patrick Alexander Lucas Van Der Flier](https://www.linkedin.com)
 * [Sirinya Richardson](https://www.linkedin.com/in/sirinya-richardson/)
 
-
-### TODO
-- [ ] Team Name  
-- [ ] Name of the game  
-- [ ] Add everyone's LinkedIn page  
-- [X] Add instructions  
-- [ ] Add set up  
-- [ ] Add assets  
-- [X] Add screenshot  
