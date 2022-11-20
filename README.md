@@ -4,11 +4,11 @@
 ![image info](./media/images/keybeats_game.png)
 
 ## How to play
-Simple clean fun with your keyboard.
-Click play.
-Listen to the clip.
-Press the keys in sequence.
-Level up by getting all of the sequence correct.
+* ### Simple clean fun with your keyboard.
+* Click play.
+* Listen to the musical sequence.
+* Use the keyboard keys and press the keys in musical sequence.
+* Level up by getting all of the musical sequence correct.
 
 ## Setup
 
@@ -32,7 +32,7 @@ No installation required, just click and play :)
 - [ ] Team Name  
 - [ ] Name of the game  
 - [ ] Add everyone's LinkedIn page  
-- [ ] Add instructions  
+- [X] Add instructions  
 - [ ] Add set up  
 - [ ] Add assets  
-- [ ] Add screenshot  
+- [X] Add screenshot  
