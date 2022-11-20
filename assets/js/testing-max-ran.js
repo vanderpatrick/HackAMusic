@@ -1,5 +1,5 @@
 // the numBeats variable will be function of the game level
-let numBeats = 5;
+let numBeats = 1;
 let rightAnswers = 0;
 let userInput = [];
 let randomSong = [];
@@ -65,14 +65,18 @@ function playSong() {
   });
 
 
-  seconds = interval / 1000 * (level + 4);
+  seconds = interval / 1000 * (level);
   secondsTxt = seconds + "s"
   createProgressbar('progressbar1', secondsTxt);
 }
 
 // function to generate randomSong using 6 different sounds, length equal to the numBeats
 function createSong(numBeats) {
-  randomSong = Array.from({length: numBeats}, () => Math.floor((Math.random() * 6) + 1));
+  if (level == 1) {
+    randomSong = Array.from({length: numBeats}, () => Math.floor((Math.random() * 6) + 1));
+  } else {
+    randomSong.push(Math.floor((Math.random() * 6) + 1));
+  }
   // to convert randomSong numerical array to randomSongSounds sound (.wav) array 
   for (i = 0; i < randomSong.length; i++) {
     randomNum = randomSong[i]
@@ -149,7 +153,7 @@ function keyPress(key) {
               popup: 'game-result-popup',
             },
             confirmButtonColor: "#DD6B55",
-            confirmButtonText: "Sorry, try again!",
+            confirmButtonText: "Press ENTER to restart!",
             }).then((result)=> {
               if (result.isConfirmed) {
                 location.reload();
