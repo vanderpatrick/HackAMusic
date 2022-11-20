@@ -1,12 +1,12 @@
 /*--------footer-------*/
 footer {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    right: 0;
     box-shadow: var(--shadow);
     background-color: var(--limed-spruce);
     margin-top: calc(var(--standard-margin) * 4);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: var(--footer-height);
 }
 
 footer .navbar {
