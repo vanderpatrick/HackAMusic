@@ -80,16 +80,25 @@ h2 {
     text-transform: uppercase;
     color: var(--gallery);
 }
-.level-score{
-    font-size: 30px;
-}
-.level-current{
-    font-size: 30px;
+
+h1 {
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 p {
   justify-self: center;
 }
+
+.level-score{
+    font-size: 30px;
+}
+
+.level-current{
+    font-size: 30px;
+}
+
+
 
 .wide-container {
     display: flex;
@@ -139,9 +148,10 @@ p {
 }
 
 .game-zone {
-  height: 60em;
-  margin-top: 15px;
-  margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    justify-content: center;
 }
 
 kbd {
@@ -221,7 +231,7 @@ kbd {
 
 .navbar-nav {
     margin-left: auto;
-    width: 15%;
+    width: 20%;
     justify-content: space-between;
 }
 
@@ -277,10 +287,8 @@ footer h3 {
     font-family: 'Yesteryear', cursive;
     color: var(--gallery);
     display: inline-block;
-    transform: rotate(-18deg);
     position: absolute;
-    left: 7%;
-    bottom: 85%;
+    bottom: 77%;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
     letter-spacing: 1px;
     z-index: 1;
