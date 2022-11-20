@@ -19,6 +19,7 @@ const sound3 = new Audio('assets/sounds/sound3.wav');
 const sound4 = new Audio('assets/sounds/sound4.wav');
 const sound5 = new Audio('assets/sounds/sound5.wav');
 const sound6 = new Audio('assets/sounds/sound6.wav');
+const sound7 = new Audio('assets/sounds/sound7.wav');
 
 let soundArray = [sound1, sound2, sound3, sound4, sound5, sound6];
  
@@ -67,15 +68,26 @@ function PlaySound(event) {
     let key = document.querySelector(`div[data-key="${event.keyCode}"]`);
     key.classList.add("active");
     audio.currentTime = 0;
-    audio.play();
+
+    // if the key pressed is correct, return the instrument sound,
+    // else an error sound
+    if (key.getAttribute("data-sound") == randomSong[userInput.length - 1]) {
+      audio.play();
+    } else {
+      sound7.play();
+    }
+    
+    console.log(key.getAttribute("data-sound"));
+    console.log(randomSong[userInput.length - 1]);
   }
 }
 // function that starts the user turn and returns results
 function keyPress(key) {
   if (keyboardActive) {
+    // get the data-sound number related to button pressed and append in the userInput array
     let keyPressed = document.querySelector(`div[data-key="${key.keyCode}"]`).getAttribute("data-sound")
     userInput.push(keyPressed);
-    
+
     if (userInput.length == randomSong.length) {
       checkAnswer(randomSong,userInput);
       
