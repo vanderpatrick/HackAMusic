@@ -1,0 +1,35 @@
+/* Header */
+.navbar {
+    box-shadow: var(--shadow);
+    background-color: var(--limed-spruce);
+}
+
+.navbar-display {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar-nav {
+    margin-left: auto;
+    width: 20%;
+    justify-content: space-between;
+}
+
+.nav-item a.nav-link {
+    color: var(--gallery);
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.logo-container {
+    margin: 0 auto 30px auto;
+}
+
+.logo-container img {
+    height: 450px;
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+    margin: 0 auto;
+}

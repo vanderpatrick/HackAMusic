@@ -1,0 +1,39 @@
+/*--------footer-------*/
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: var(--shadow);
+    background-color: var(--limed-spruce);
+    margin-top: calc(var(--standard-margin) * 4);
+}
+
+footer .navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: var(--shadow);
+}
+
+footer h3 {
+    font-family: 'Yesteryear', cursive;
+    color: var(--gallery);
+    display: inline-block;
+    position: absolute;
+    bottom: 77%;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+    letter-spacing: 1px;
+    z-index: 1;
+}
+
+#navbarText {
+  width: 100%;
+}
+
+#footer-nav {
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
