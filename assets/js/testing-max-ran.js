@@ -38,14 +38,14 @@ function playSong() {
   });
   seconds = interval / 1000 * (level + 4);
   secondsTxt = seconds + "s"
-  console.log(secondsTxt)
+
   createProgressbar('progressbar1', secondsTxt);
 }
 
 // function to start a turn
 function userTurn() {
   console.log(level);
-  if (level > 1) {
+  if (level >= 1) {
     deleteProgressbar();
   };
   keyboardActive = "active"
@@ -84,8 +84,6 @@ function PlaySound(event) {
     } else {
       sound7.play();
     }
-    // console.log(key.getAttribute("data-sound"));
-    // console.log(randomSong[userInput.length - 1]);
   }
 }
 // function that starts the user turn and returns results
