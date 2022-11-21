@@ -1,31 +1,24 @@
-# KeyPlayers presents:
+# KeyPlayers presents: KEYBEATS
+
+
+## *"Play your keys, match the beats!"*
 <br>
 
-
-![](media/images/screenshot-2.png)
-
-<br>
-
-## *Play your keyboard to match the beats!*
-<br>
-
-Musical memory game to play with keyboard. Easy to navigate and intuitive play. The user is given a musical sequence which they have to recreate with pressing the keys in their keyboard. Each key will reproduce a different instrument sound. It has visuals effects for better user experience.
-Success in reproducing the sequence will bring the game to the next level. Each level will increment the sequence with one sound to the previous one.
+KeyBeats is a music memory game easy to navigate and play. The user listens to a sound sequence and then is challenged to recreate it pressing the keys in his keyboard, each one reproducing six different sounds. Success in making the sequence will bring the game to the next level: each level up will increment the sequence with one more sound!
+This project has been developed to compete in the *Code Instutute Hackaton Hero Challenge*.
 
 <br>
 
 ## How to play
-<br>
 
-![](media/images/screenshot-3.png)
 
 <br>
 
-* Simple clean fun with your keyboard.
-* Press enter for get the sequence to play.
+* This game is oriented to users who can play with their keyboard.
+* Press enter to play the sequence of sounds.
 * Listen to the musical sequence.
-* Press the keys in your keyboard to match the musical sequence.
-* Level up by getting all of the musical sequence correct.
+* Press the keys in your keyboard to play six different sounds and match the sequence.
+* Level up by playing all the sounds of the musical sequence correctly.
 
 <br>
 
@@ -36,29 +29,46 @@ Success in reproducing the sequence will bring the game to the next level. Each 
 [KeyBeats - Click here to play!](https://vanderpatrick.github.io/HackAMusic/index.html)
 
 ### How to install
-No installation required, just click and play :)
+No installation required, just click and play!
 
 <br>
 
-## Wireframes
+## Wireframes and Web Pages
 
 <br>
 
-### The home page
+## The home page
+The home page is clean and simple: its sole scope is to invite the user to read the instructions or play the game.
 
 <br>
 
-![landing page](./docs/images/landing-page-wireframe.png)
-<br>
-
-### The how to play page
+![landing page Wireframe](./docs/images/landing-page-wireframe.png)
 
 <br>
 
-![how to page](./docs/images/how-to-page-wireframe.png)
+![Landing Page Screenshot](media/images/screenshot-2.png)
+
 <br>
 
-### The game page
+## The how to play page
+This page explains the rules of the game and gives to the users the possibility to test the different sounds.
+
+<br>
+
+![how to Wireframe](./docs/images/how-to-page-wireframe.png)
+
+<br>
+
+![How to Screenshot](media/images/screenshot-3.png)
+
+<br>
+
+## The game page
+The game page contains a game area with three main sections:
+- The upper part shows the level the user is playing in and the score he has gained.
+- The middle part contains the player, where the user can start the sound sequence. A progress bar keeps track of its duration.
+- The lower part shows the different key buttons associated with six different sounds.
+
 
 <br>
 
@@ -66,14 +76,21 @@ No installation required, just click and play :)
 
 <br>
 
+![Game](media/images/screenshot-1.png)
+
+<br>
+
+
 ## Design
 
 <br>
 
 ### Colour Palette
+The colour palette is studied to give importance to the keyboard buttons, whose colors are inspired by the [Launchpad X](https://novationmusic.com/it/launch/launchpad-x). These colors are metallic and allow the keyboard to pop from the screen. 
+
+
 
 <br>
-A simple colour palette to reflect the them of a retro keyboard game, inspired by *Launchpad X*. Keeping to metallic colours that allow the keyboard to pop. 
 
 ![color palette](./media/images/color-palette.png)
 
@@ -82,41 +99,33 @@ A simple colour palette to reflect the them of a retro keyboard game, inspired b
 
 ### Fonts
 
+- Main font: 'Special Elite' - for the body and headings.
+- Paired with: 'Yesteryear' - chosen to add a small style change for the footer.
+
 <br>
-Fonts to go accorder with the theme of the game.
-
-Main font: 'Special Elite' - for the body and headings.
-Paired with: 'Yesteryear' - chosen to add a small style change for the footer.
-
 
 ## Features
 
-<br>
-The site consists of three pages, which objective is to present a game to the user. Home page that present to the user two buttons, "How To" that directs to the instructions, and "Play" that directs to the game page.
-
-Game to be play with the keyboard keys, but has a visual effect keys and progress bar, also a score count for better experience and engage of the user. 
+The site consists of three pages, whose objective is to present the game to the user and make the playing session smooth, intuity and enjoyable.
+The game is meant to be played with a keyboard and has several visual effect (shake and color of the keys, progress bar) for a better  user experience and engagement.
 
 <br>
 
-![Game](media/images/screenshot-1.png)
-
-<br>
-
-### Posible features to implement in future
+### Possible features to implement in future
 
 <br>
 
 * Add a leaderboard: 
-    - Save score and present in table
+    - Save score of every user and present it in a table.
 * Play with 3 lives: 
-    - Three chances to get the sequence correct, otherwise lose lives
-* Define accurate point system:
-    - Length of keypress to determine whether user sticking to the tempo and rhythm
+    - Three chances to get the sequence correct, before the user loses the games and comes back to level 1.
+* Introduce timing of key press for a much more engaging experience:
+    - Length of keypress to determine whether user is sticking to the tempo and rhythm.
 
 ## Bugs
 
 <br>
-At the moment no bug had been notice.
+At the moment no bug has been noticed.
 
 <br>
 
@@ -139,12 +148,12 @@ At the moment no bug had been notice.
 ## Validation
 
 <br>
-All the code had been test in validators sites as follows:
+All the code has been tested in validators sites as follows:
 
-* HTML and CSS in [w3c](https://validator.w3.org/) report had return with no error, but a warning that have not being able to sort.
-* JavaScript in [JsHint](https://jshint.com/) report had return with no error, but many warnings referent to the version ES6 that have not being able to sort.
+* HTML and CSS via [w3c](https://validator.w3.org/): no errors.
+* JavaScript via [JsHint](https://jshint.com/): no errors.
 
-Manual test had been run and at the moment the game is running as expected.
+Manual testing had been implemented: the game is running as expected.
 
 <br>
 
