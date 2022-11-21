@@ -33,7 +33,7 @@ Success in reproducing the sequence will bring the game to the next level. Each 
 
 <br>
 
-[KeyBeats - Click here to play!](url:https://vanderpatrick.github.io/HackAMusic/index.html)
+[KeyBeats - Click here to play!](https://vanderpatrick.github.io/HackAMusic/index.html)
 
 ### How to install
 No installation required, just click and play :)
@@ -73,7 +73,7 @@ No installation required, just click and play :)
 ### Colour Palette
 
 <br>
-A simple colour palette to reflect the them of a retro keyboard game, inspired by the [Launchpad X](https://novationmusic.com/en/launch/launchpad-x). Keeping to metallic colours that allow the keyboard to pop. 
+A simple colour palette to reflect the them of a retro keyboard game, inspired by *Launchpad X*. Keeping to metallic colours that allow the keyboard to pop. 
 
 ![color palette](./media/images/color-palette.png)
 
@@ -150,10 +150,13 @@ Manual test had been run and at the moment the game is running as expected.
 
 ## Credits
 
-* Palette [She Codes](https://palettes.shecodes.io/palettes/1100#palette)
-* Media audios [Freesound](https://freesound.org/)
-* Research
-    [Stack Overflow](https://stackoverflow.com/)
+* Palette <br> [She Codes](https://palettes.shecodes.io/palettes/1100#palette)
+* Media audios <br> [Freesound](https://freesound.org/)
+
+* [Launchpad X](https://novationmusic.com/en/launch/launchpad-x)  
+
+* Research <br>
+    [Stack Overflow](https://stackoverflow.com/) <br>
     [GeeksforGeeks](https://www.geeksforgeeks.org/)
 
 
