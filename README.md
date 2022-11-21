@@ -5,40 +5,35 @@
 <br>
 
 KeyBeats is a music memory game easy to navigate and play. The user listens to a sound sequence and then is challenged to recreate it pressing the keys in his keyboard, each one reproducing six different sounds. Success in making the sequence will bring the game to the next level: each level up will increment the sequence with one more sound!
-This project has been developed to compete in the *Code Instutute Hackaton Hero Challenge*.
-
 <br>
-
-## How to play
-
-
-<br>
-
-* This game is oriented to users who can play with their keyboard.
-* Press enter to play the sequence of sounds.
-* Listen to the musical sequence.
-* Press the keys in your keyboard to play six different sounds and match the sequence.
-* Level up by playing all the sounds of the musical sequence correctly.
+The project has been developed to compete in the *Code Instutute Hackaton Hero Challenge*.
 
 <br>
 
 ## Deployed link
 
-<br>
-
 [KeyBeats - Click here to play!](https://vanderpatrick.github.io/HackAMusic/index.html)
 
-### How to install
+<br>
+
+## How to install
 No installation required, just click and play!
 
 <br>
 
+## User Stories
+
+- As a user, I want to have an intuitive navigation in the game.
+- As a user, I want to listen a sequence of sounds.
+- As a user, I want to reproduce the sequence and with a response from the game that reinforces what sound I am generating.
+- As a user, I want to know if I succeded or not in the sequence.
+- As a user, I want to know my score and what level I am in.
+- As a user, I want to read the game instructions and have a playground to practice my skills.
+
 ## Wireframes and Web Pages
 
-<br>
-
-## The home page
-The home page is clean and simple: its sole scope is to invite the user to read the instructions or play the game.
+### 1 - The home page
+The home page is clean and simple: its sole scope is to invite the user to read the instructions and/or play the game.
 
 <br>
 
@@ -50,8 +45,15 @@ The home page is clean and simple: its sole scope is to invite the user to read 
 
 <br>
 
-## The how to play page
-This page explains the rules of the game and gives to the users the possibility to test the different sounds.
+### 2 - The how to play page
+This page explains the rules of the game and gives to the user the possibility to test the different sounds.
+
+### How to play:
+1. This game is oriented to users who can play with their keyboard.
+2. The user press enter to play the sequence of sounds.
+3. The user listen to the musical sequence.
+4. The user press the keys in its keyboard to play six different sounds and match the sequence.
+5. The user progresses in the game by playing all the sounds of the musical sequence correctly.
 
 <br>
 
@@ -63,7 +65,7 @@ This page explains the rules of the game and gives to the users the possibility 
 
 <br>
 
-## The game page
+### 3 - The game page
 The game page contains a game area with three main sections:
 - The upper part shows the level the user is playing in and the score he has gained.
 - The middle part contains the player, where the user can start the sound sequence. A progress bar keeps track of its duration.
@@ -86,7 +88,7 @@ The game page contains a game area with three main sections:
 <br>
 
 ### Colour Palette
-The colour palette is studied to give importance to the keyboard buttons, whose colors are inspired by the [Launchpad X](https://novationmusic.com/it/launch/launchpad-x). These colors are metallic and allow the keyboard to pop from the screen. 
+The colour palette is studied to highlight the keyboard buttons, whose colors are inspired by the [Launchpad X](https://novationmusic.com/it/launch/launchpad-x). These colors are metallic and allow the keyboard to pop from the background. 
 
 
 
@@ -106,7 +108,7 @@ The colour palette is studied to give importance to the keyboard buttons, whose 
 
 ## Features
 
-The site consists of three pages, whose objective is to present the game to the user and make the playing session smooth, intuity and enjoyable.
+The site consists of three pages, whose objective is to present the game to the user and make the playing session smooth, intuitive and enjoyable.
 The game is meant to be played with a keyboard and has several visual effect (shake and color of the keys, progress bar) for a better  user experience and engagement.
 
 <br>
