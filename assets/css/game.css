@@ -17,7 +17,7 @@
 .instruction-page,
 .main-page,
 .game-zone {
-    display: flex;
+    display: block;
     flex-direction: column;
     justify-content: center;
     padding-bottom: var(--footer-height);
